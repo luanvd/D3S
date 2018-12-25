@@ -1,0 +1,8 @@
+section.content-header.breadcrumb
+  ol.breadcrumb
+    li
+      a href=admin_root_path 
+        i.fa.fa-dashboard Home
+    li
+      a href=send("admin_#{params[:controller].split("/").last}_path") = params[:controller].split("/").last.camelize
+    li.active= params[:action]

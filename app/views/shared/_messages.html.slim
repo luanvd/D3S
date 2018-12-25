@@ -1,0 +1,5 @@
+- flash.each do |type, message|
+  - if message
+    div class=("alert #{flash_class type.to_sym} fade in flash-notice") 
+      a.close aria-hidden="true" data-dismiss="alert" href="#"  ×
+      p.text-center.flash-message= message

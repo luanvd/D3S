@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title= full_title yield(:title)
+    - if params[:controller] == 'static_pages'
+      = stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track' => true
+      = javascript_include_tag 'static_pages', 'data-turbolinks-track' => true
+    - else
+      = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+      = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = render 'layouts/admin/shim'
+  - if params[:controller] == 'home_pages'
+    body
+      = yield
+  - else
+    body class=("hold-transition sidebar-mini skin-blue #{yield :body_class}") id="#{yield :body_id}"
+      .wrapper
+        = render 'layouts/admin/header'
+        = render 'layouts/admin/left_bar'
+        .content-wrapper
+          = render 'shared/breadcrumb'
+          = render 'shared/messages'
+          = yield
+        = render 'layouts/admin/footer'
+      - if user_signed_in?
+        = render 'shared/messages'
+        = yield

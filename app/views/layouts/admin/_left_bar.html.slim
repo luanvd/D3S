@@ -1,0 +1,55 @@
+aside.main-sidebar
+  section.sidebar
+    .user-panel
+      .pull-left.image
+        = image_tag 'no_image.png', size: '20x20', class: "img-circle", alt: "User Avatar"
+      .pull-left.info
+        p
+          User name
+        a href="#"
+          i.fa.fa-circle.text-success
+          | Online
+    form.sidebar-form action="#" method="get"
+      .input-group
+        input.form-control name="q" placeholder="Search..." type="text" /
+        span.input-group-btn
+          button#search-btn.btn.btn-flat name="search" type="submit"
+            i.fa.fa-search
+    ul.sidebar-menu data-widget="tree"
+      li.header MAIN NAVIGATION
+      li
+        = link_to "#" do
+          i.fa.fa-dashboard
+          span Menu
+      li
+        = link_to "#" do
+          i.nav-icon.fa.fa-bullhorn
+          span Slide show
+      li
+        = link_to "#" do
+          i.fa.fa-users
+          span Introduce
+      li
+        = link_to "#" do
+          i.fa.fa-edit
+          span Commitment
+      li
+        = link_to "#" do
+          i.nav-icon.fa.fa-filter
+          span Source
+      li
+        = link_to "#" do
+          i.nav-icon.fa.fa-sticky-note
+          span Product
+      li
+        = link_to "#" do
+          i.nav-icon.fa.fa-money
+          span Producer
+      li
+        = link_to "#" do
+          i.fa.fa-pie-chart
+          span Our facilities
+      li
+        = link_to "#" do
+          i.fa.fa-first-order
+          span Our brands
