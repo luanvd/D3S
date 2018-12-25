@@ -10,6 +10,15 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require turbolinks
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
+//= require adminlte.min
+//= require jquery.min
+//= require icheck.min
+//= require popper.min
+//= require bootstrap.min
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
+//= require demo
+//= require intlTelInput.min

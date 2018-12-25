@@ -12,4 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap.min
+ *= require ionicons.min
+ *= require dataTables.bootstrap.min
+ *= require AdminLTE.min
+ *= require all_skins
+ *= require blue
+ *= require font-awesome
+ *= require custom
+ *= require intlTelInput.min
  */
