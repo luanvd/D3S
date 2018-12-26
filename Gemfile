@@ -18,6 +18,7 @@ gem "slim-rails"
 gem "devise"
 gem "font-awesome-rails"
 gem 'jquery-rails'
+gem "cancancan"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

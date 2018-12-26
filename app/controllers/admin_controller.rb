@@ -2,6 +2,11 @@ class AdminController < ApplicationController
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = exception.message
+    redirect_to admin_root_path
+  end
+
   private
   def configure_permitted_parameters
     devise_parameter_sanitizer.for :account_update do |u|
