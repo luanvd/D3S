@@ -1,0 +1,36 @@
+- provide :title, t('users')
+section.content
+  .row
+    .col-xs-12
+      .box.box-info
+        .box-header
+          h3.box-title User detail
+        .box-body
+          table.table.table-bordered.table-striped
+            tbody
+              tr
+                td.font-weight-bold ID
+                td= @user.id
+              tr
+                td.font-weight-bold Email
+                td= @user.email
+              tr
+                td.font-weight-bold Name
+                td= @user.name
+              tr
+                td.font-weight-bold Role
+                td= @user.role.capitalize
+              tr
+                td.font-weight-bold Avatar
+                td
+                  - if @user.user_avatar.present?
+                    = image_tag @user.user_avatar.url(:thumb)
+                  - else
+                    = image_tag 'no_image.png', size: "100x100"
+              tr
+                td colspan="2"
+                  = link_to "Back to list", admin_users_path, class: 'btn btn-success'
+                  | &nbsp;
+                  = link_to "Edit", edit_admin_user_path(@user), class: 'btn btn-info'
+                  | &nbsp;
+                  = link_to "Delete", nil, class: 'btn btn-danger'
