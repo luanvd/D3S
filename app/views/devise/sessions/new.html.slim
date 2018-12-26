@@ -1,0 +1,26 @@
+= content_for :body_class, 'login-page hold-transition'
+.login-box
+  .login-logo
+    a href="#" 
+      b= t "admin"
+      = t "app_name"
+  .login-box-body
+    p.login-box-msg= t "sign_in_to_start"
+    = form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+      .form-group.has-feedback
+        = f.email_field :email, autofocus: true, class: "form-control has-feedback", placeholder: "Email"
+        span.fa.fa-envelope.form-control-feedback
+      .form-group.has-feedback
+        = f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password"
+        span.fa.fa-lock.form-control-feedback
+      .row
+        .col-xs-8
+          - if devise_mapping.rememberable?
+            .checkbox.icheck
+              label
+                = f.check_box :remember_me
+                |  #{t "rembermer_me"}
+        .col-xs-4
+          button.btn.btn-primary.btn-block.btn-flat type="submit" = t "sign_in"
+    a href="#"  I forgot my password
+    br/

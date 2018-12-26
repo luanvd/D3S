@@ -3,9 +3,9 @@ html
   head
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
     title= full_title yield(:title)
-    - if params[:controller] == 'static_pages'
-      = stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track' => true
-      = javascript_include_tag 'static_pages', 'data-turbolinks-track' => true
+    - if params[:controller] == 'home_pages'
+      = stylesheet_link_tag 'home_pages', media: 'all', 'data-turbolinks-track' => true
+      = javascript_include_tag 'home_pages', 'data-turbolinks-track' => true
     - else
       = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
       = javascript_include_tag 'application', 'data-turbolinks-track' => true
@@ -15,15 +15,15 @@ html
     body
       = yield
   - else
-    body class=("hold-transition sidebar-mini skin-blue #{yield :body_class}") id="#{yield :body_id}"
+    body class=("hold-transition sidebar-mini skin-blue #{yield (:body_class)}")
       .wrapper
+      - if user_signed_in?
         = render 'layouts/admin/header'
         = render 'layouts/admin/left_bar'
         .content-wrapper
-          = render 'shared/breadcrumb'
           = render 'shared/messages'
           = yield
         = render 'layouts/admin/footer'
-      - if user_signed_in?
+      - else
         = render 'shared/messages'
         = yield
