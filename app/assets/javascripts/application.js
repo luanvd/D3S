@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require_tree .
 //= require adminlte.min
 //= require jquery.min
 //= require icheck.min
+//= require login
 //= require popper.min
 //= require bootstrap.min
 //= require jquery.dataTables.min
