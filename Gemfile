@@ -40,3 +40,5 @@ gem 'rails-i18n'
 gem 'rb-readline'
 gem 'carrierwave'
 gem 'cloudinary'
+gem "nested_form"
+gem "figaro"

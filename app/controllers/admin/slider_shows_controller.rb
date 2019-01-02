@@ -1,10 +1,22 @@
 class Admin::SliderShowsController < Admin::BaseController
   before_action :load_slider_show, only: [:show, :edit, :update]
 
+  def show
+    @slider_images = @slider_show.slider_images.order(sort_index: :asc)
+  end
+
   def edit
+    @slider_images = @slider_show.slider_images.presence || [@slider_show.slider_images.new]
   end
 
   def update
+    if @slider_show.update_attributes slider_show_params
+      flash[:success] = t ".success"
+      redirect_to admin_slider_shows_path
+    else
+      flash[:failed] = t ".failed"
+      render :edit
+    end
   end
 
   private

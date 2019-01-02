@@ -23,40 +23,9 @@ aside.main-sidebar
       li
         = link_to admin_users_path do
           i.fa.fa-user
-          span Users      
+          span = t ".user"
       li
-        = link_to "#" do
-          i.fa.fa-dashboard
-          span Menu
-      li
-        = link_to "#" do
-          i.nav-icon.fa.fa-bullhorn
-          span Slide show
-      li
-        = link_to "#" do
-          i.fa.fa-users
-          span Introduce
-      li
-        = link_to "#" do
-          i.fa.fa-edit
-          span Commitment
-      li
-        = link_to "#" do
-          i.nav-icon.fa.fa-filter
-          span Source
-      li
-        = link_to "#" do
-          i.nav-icon.fa.fa-sticky-note
-          span Product
-      li
-        = link_to "#" do
-          i.nav-icon.fa.fa-money
-          span Producer
-      li
-        = link_to "#" do
-          i.fa.fa-pie-chart
-          span Our facilities
-      li
-        = link_to "#" do
-          i.fa.fa-first-order
-          span Our brands
+        = link_to admin_slider_shows_path do
+          i.fa.fa-user
+          span = t ".slider_show"
+      

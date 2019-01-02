@@ -1,0 +1,18 @@
+- provide :title, t(".slider_show")
+section.content-header
+  = link_to t(".edit"), edit_admin_slider_shows_path, class: 'btn bg-purple margin'
+- if @slider_show.present?
+  section.content
+    table.table.table-bordered.table-striped
+      thead
+        th = t ".caption"
+        th = t ".sort_index"
+        th = t ".image"
+      tbody
+        - @slider_images.each do |slider_image|
+          tr
+            td = slider_image.caption
+            td = slider_image.sort_index
+            td
+              = link_to slider_image.image_url, "target": "blank" do
+                = image_tag slider_image.image_url, height: 200
