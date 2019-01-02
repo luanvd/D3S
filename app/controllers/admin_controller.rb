@@ -17,4 +17,9 @@ class AdminController < ApplicationController
       u.permit :name, :email, :user_avatar, :password, :password_confirmation
     end
   end
+
+  def current_ability
+    controller_namespace = params[:controller].split("/").first
+    Ability.new current_user, controller_namespace
+  end  
 end
