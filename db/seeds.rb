@@ -11,3 +11,6 @@ User.create email: "admin@test.com", password: '12345678', role: :admin
 
 puts "create mod"
 User.create email: "mod@test.com", password: '12345678', role: :mod
+
+puts "create default slider show"
+SliderShow.create(name: "Default")

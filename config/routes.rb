@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root :to => "users#index"
       resources :users
-      resources :sliders
+      resource :slider_shows, only: [:show, :edit, :update]
     end
   end
 end

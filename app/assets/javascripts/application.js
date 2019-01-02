@@ -24,3 +24,4 @@
 //= require dataTables.bootstrap.min
 //= require demo
 //= require intlTelInput.min
+//= require jquery_nested_form

@@ -30,3 +30,6 @@ config/secrets.yml
 .DS_Store
 app/assets/.DS_Store
 config/database.yml
+
+# Ignore application configuration
+/config/application.yml
