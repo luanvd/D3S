@@ -16,15 +16,15 @@ html
       = yield
   - else
     body class=("hold-transition sidebar-mini skin-blue #{yield (:body_class)}")
-      .wrapper
-      - if user_signed_in?
-        = render 'layouts/admin/header'
-        = render 'layouts/admin/left_bar'
-        .content-wrapper
-          = render 'shared/breadcrumb'
+        - if user_signed_in?
+          .wrapper
+            = render 'layouts/admin/header'
+            = render 'layouts/admin/left_bar'
+            .content-wrapper
+              = render 'shared/breadcrumb'
+              = render 'shared/messages'
+              = yield
+            = render 'layouts/admin/footer'
+        - else
           = render 'shared/messages'
           = yield
-        = render 'layouts/admin/footer'
-      - else
-        = render 'shared/messages'
-        = yield

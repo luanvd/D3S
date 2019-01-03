@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190102134311) do
+ActiveRecord::Schema.define(version: 20190103023953) do
+
+  create_table "d3s_information_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "d3s_information_id"
+    t.string "language"
+    t.string "title_1"
+    t.text "des_1"
+    t.string "title_2"
+    t.text "des_2"
+    t.text "des_middle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["d3s_information_id"], name: "index_d3s_information_languages_on_d3s_information_id"
+  end
+
+  create_table "d3s_informations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "image_1"
+    t.string "image_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "slider_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "slider_show_id"
@@ -43,4 +64,5 @@ ActiveRecord::Schema.define(version: 20190102134311) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "d3s_information_languages", "d3s_informations"
 end

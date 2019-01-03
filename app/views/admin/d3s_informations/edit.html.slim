@@ -1,0 +1,61 @@
+section.content
+  .row
+    .col-xs-8
+      .box.box-success
+        .box-header.with-border
+          h3.box-title= t('.edit')
+        .box-body
+          = nested_form_for @d3s_infor, url: admin_d3s_informations_path do |f|
+            .= t '.image'
+            hr
+              .row
+                section#content-edit-d3s-about-image.content
+                  .box.box-info
+                    .row
+                      .col-xs-6.box-header.with-border
+                        .text-center= t('.image_1')
+                      .col-xs-6.box-header.with-border
+                        .text-center= t('.image_2')                        
+                    .box-body
+                      .row
+                        .col-xs-6
+                          = f.file_field :image_1, class: "form-control"
+                        .col-xs-6
+                          = f.file_field :image_2, class: "form-control"
+            = t '.d3s_infor_lang_title'
+            hr
+            .row
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.en')
+                    .box-body
+                      = f.fields_for :d3s_information_languages, @d3s_infor_en do |ff|
+                        = ff.text_field :title_1, class: "form-control", placeholder: t('.title_1')
+                        br
+                        = ff.text_area :des_1, rows: 5, class: "form-control", placeholder: t('.des_1')
+                        br
+                        = ff.text_field :title_2, class: "form-control", placeholder: t('.title_2')
+                        br
+                        = ff.text_area :des_2, rows: 5, class: "form-control", placeholder: t('.des_2')
+                        br
+                        = ff.text_area :des_middle, rows: 5, class: "form-control", placeholder: t('.des_middle')
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.fr')
+                    .box-body
+                      = f.fields_for :d3s_information_languages, @d3s_infor_fr do |ff|
+                        = ff.text_field :title_1, class: "form-control", placeholder: t('.title_1')
+                        br
+                        = ff.text_area :des_1, rows: 5, class: "form-control", placeholder: t('.des_1')
+                        br
+                        = ff.text_field :title_2, class: "form-control", placeholder: t('.title_2')
+                        br
+                        = ff.text_area :des_2, rows: 5, class: "form-control", placeholder: t('.des_2')
+                        br
+                        = ff.text_area :des_middle, rows: 5, class: "form-control", placeholder: t('.des_middle')
+            .form-group
+              = f.submit t(".update"), class: "form-control btn btn-primary btn-flat"

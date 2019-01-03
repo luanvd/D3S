@@ -1,1 +1,5 @@
 fr:
+  layouts:
+    admin:
+      left_bar:
+        d3s_information: "A Propos"

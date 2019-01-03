@@ -21,11 +21,14 @@ aside.main-sidebar
     ul.sidebar-menu data-widget="tree"
       li.header MAIN NAVIGATION
       li
-        = link_to admin_users_path do
+        = link_to admin_users_path, id: "left-bar-admin-user" do
           i.fa.fa-user
           span = t ".user"
       li
-        = link_to admin_slider_shows_path do
+        = link_to admin_d3s_informations_path, id: "left-bar-admin-about" do
+          i.fa.fa-sticky-note
+          span = t ".d3s_information"
+      li
+        = link_to admin_slider_shows_path, id: "left-bar-admin-slider" do
           i.fa.fa-user
           span = t ".slider_show"
-      

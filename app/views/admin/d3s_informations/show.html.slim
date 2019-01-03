@@ -1,0 +1,59 @@
+- provide :title, t('.d3s_infor_title')
+section.content-header
+  = link_to t('.edit'), edit_admin_d3s_informations_path, class: 'btn bg-purple margin'
+- if @d3s_infor.present?
+  section.content
+    .row
+      .col-xs-8
+        .box.box-info
+          .box-header
+            h3.box-title
+              = t('.d3s_infor_title')
+          .box-body
+            table#users-table.table.table-bordered.table-hover
+              - thead = [t('.image_1'), t('.image_2')]
+              thead
+                - thead.each do |th|
+                  th.text-center= th
+              tbody
+                tr
+                  td.text-center= image_tag @d3s_infor.image_1, height: 200
+                  td.text-center= image_tag @d3s_infor.image_2, height: 200
+- else
+  p.text-center
+    | There are no data
+
+section.content
+  .row
+    .col-xs-8
+      .box.box-info
+        .box-header
+          h3.box-title
+            = t('.d3s_infor_lang_title')
+        .box-body
+          table#about-table.table.table-bordered.table-hover
+            - thead = ['', t('.language.en'), t('.language.fr')]
+            thead
+              - thead.each do |th|
+                th.text-center= th
+            tbody
+              tr
+                td.text-center= t('.title_1')
+                td.text-center= @d3s_infor_en.title_1
+                td.text-center= @d3s_infor_fr.title_1
+              tr
+                td.text-center= t('.des_1')
+                td.text-center= @d3s_infor_en.des_1
+                td.text-center= @d3s_infor_fr.des_1
+              tr
+                td.text-center= t('.title_2')
+                td.text-center= @d3s_infor_en.title_2
+                td.text-center= @d3s_infor_fr.title_2
+              tr
+                td.text-center= t('.des_2')
+                td.text-center= @d3s_infor_en.des_2
+                td.text-center= @d3s_infor_fr.des_2
+              tr
+                td.text-center= t('.des_middle')
+                td.text-center= @d3s_infor_en.des_middle
+                td.text-center= @d3s_infor_fr.des_middle

@@ -1,6 +1,6 @@
-- provide :title, t('users')
+- provide :title, t('.users')
 section.content-header
-  = link_to 'New User', new_admin_user_path, class: 'btn bg-purple margin'
+  = link_to t('.new_user'), new_admin_user_path, class: 'btn bg-purple margin', id: "admin-new-user"
 - if @users.any?
   section.content
     .row
