@@ -2,8 +2,8 @@
 .login-box
   .login-logo
     a href="#" 
-      b= t "admin"
-      = t "app_name"
+      b= t ".admin"
+      = t ".app_name"
   .login-box-body
     p.login-box-msg= t "sign_in_to_start"
     = form_for resource, as: resource_name, url: session_path(resource_name) do |f|

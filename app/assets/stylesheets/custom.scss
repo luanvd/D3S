@@ -1,7 +1,7 @@
 @import 'font-awesome';
 
-.content-wrapper {
-  min-height: 850px !important;
+#content-edit-d3s-about-image {
+  min-height: 140px !important;
 }
 
 .md-input-message-animation {
@@ -121,7 +121,7 @@
 }
 
 .breadcrumb {
-  margin-bottom: 25px !important;
+  margin-bottom: 0px !important;
 }
 
 .alert-successed {
@@ -148,9 +148,7 @@
 .bg-warning, .bg-info, .bg-danger, .bg-success, .bg-secondary {
   display: unset;
 }
-.main-footer {
-  margin-top: -10px;
-}
+
 .line-chart-statistic {
   margin-left: 5px;
 }

@@ -1,4 +1,6 @@
-class Admin::SliderShowsController < Admin::BaseController
+class Admin::SliderShowsController < AdminController
+  load_and_authorize_resource
+
   before_action :load_slider_show, only: [:show, :edit, :update]
 
   def show

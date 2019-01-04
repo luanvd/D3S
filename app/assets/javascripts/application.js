@@ -25,3 +25,4 @@
 //= require demo
 //= require intlTelInput.min
 //= require jquery_nested_form
+//= require admin_refresh_page

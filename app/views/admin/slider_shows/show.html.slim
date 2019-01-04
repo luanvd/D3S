@@ -1,6 +1,6 @@
 - provide :title, t(".slider_show")
 section.content-header
-  = link_to t(".edit"), edit_admin_slider_shows_path, class: 'btn bg-purple margin'
+  = link_to t(".edit"), edit_admin_slider_shows_path, class: 'btn bg-purple margin', id: "admin-edit-slider"
 - if @slider_show.present?
   section.content
     table.table.table-bordered.table-striped

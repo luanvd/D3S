@@ -1,1 +1,45 @@
 en:
+  admin:
+    users:
+      index:
+        users: "Users"
+        new_user: "New User"
+      new:
+        create_user: "Create User"
+    d3s_informations:
+      show:
+        edit: "Edit"
+        d3s_infor_title: "About"
+        d3s_infor_lang_title: "About with language"
+        image_1: "Image 1"
+        image_2: "Image 2"
+        title_1: "Title 1"
+        title_2: "Title 2"
+        des_1: "Description 1"
+        des_2: "Description 2"
+        des_middle: "Middle description"
+        language:
+          en: "English"
+          fr: "France"
+      edit:
+        edit: "Edit About"
+        update: "Update About"
+        d3s_infor_lang_title: "About with language"
+        image: "Image"
+        image_1: "Image 1"
+        image_2: "Image 2"
+        title_1: "Title 1"
+        title_2: "Title 2"
+        des_1: "Description 1"
+        des_2: "Description 2"
+        des_middle: "Middle description"      
+        language:
+          en: "English"
+          fr: "France"
+      update:
+        success: "Update About information successed"
+        fail: "Update About information failed"
+  layouts:
+    admin:
+      left_bar:
+        d3s_information: "About"
