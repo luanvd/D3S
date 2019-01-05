@@ -15,9 +15,10 @@ section.content
                       .col-xs-4.col-xs-offset-4.box-header.with-border
                         .text-center= t('.image')
                     .box-body
-                      .row
+                      .row.text-center
                         .col-xs-4.col-xs-offset-4
-                          = f.file_field :image, class: "form-control"
+                          = image_tag @origine.image, height: 200, id: "img_prev_origin"
+                          = f.file_field :image, class: "form-control", onchange: "readURL(this, '#img_prev_origin');"
             = t '.origine_lang_title'
             hr
             .row
