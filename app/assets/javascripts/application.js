@@ -24,3 +24,4 @@
 //= require demo
 //= require intlTelInput.min
 //= require jquery_nested_form
+//= require preview_image
