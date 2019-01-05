@@ -22,6 +22,45 @@ en:
         new_user: "New User"
       new:
         create_user: "Create User"
+    origines:
+      show:
+        edit: "Edit"
+        origine_title: "Origine"
+        origine_lang_title: "Origine with language"
+        image: "Image"
+        left_text_1: "Left text 1"
+        left_text_2: "Left text 2"
+        left_text_3: "Left text 3"
+        right_title_1: "Right title 1"
+        right_title_2: "Right title 2"
+        right_title_3: "Right title 3"
+        right_des_1: "Right description 1"
+        right_des_2: "Right description 2"
+        right_des_3: "Right description 3"
+        image_background: "Background Image"
+        language:
+          en: "English"
+          fr: "France"      
+      edit:
+        edit: "Edit Origines"
+        update: "Update Origines"
+        origine_lang_title: "Origine with language"
+        image: "Image"
+        left_text_1: "Left text 1"
+        left_text_2: "Left text 2"
+        left_text_3: "Left text 3"
+        right_title_1: "Right title 1"
+        right_title_2: "Right title 1"
+        right_title_3: "Right title 1"
+        right_des_1: "Right description 1"
+        right_des_2: "Right description 2"
+        right_des_3: "Right description 3"
+        language:
+          en: "English"
+          fr: "France"
+      update:
+        success: "Update origine successed"
+        fail: "Update origine failed"
     d3s_informations:
       show:
         edit: "Edit"

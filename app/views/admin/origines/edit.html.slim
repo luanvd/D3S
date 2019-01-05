@@ -1,0 +1,73 @@
+section.content
+  .row
+    .col-xs-8
+      .box.box-success
+        .box-header.with-border
+          h3.box-title= t('.edit')
+        .box-body
+          = nested_form_for @origine, url: admin_origines_path do |f|
+            .= t '.image'
+            hr
+              .row
+                section#content-edit-origine-image.content
+                  .box.box-info
+                    .row
+                      .col-xs-4.col-xs-offset-4.box-header.with-border
+                        .text-center= t('.image')
+                    .box-body
+                      .row
+                        .col-xs-4.col-xs-offset-4
+                          = f.file_field :image, class: "form-control"
+            = t '.origine_lang_title'
+            hr
+            .row
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.en')
+                    .box-body
+                      = f.fields_for :origine_languages, @origine_en do |ff|
+                        = ff.text_field :left_text_1, class: "form-control", placeholder: t('.left_text_1')
+                        br
+                        = ff.text_field :left_text_2, class: "form-control", placeholder: t('.left_text_2')
+                        br
+                        = ff.text_field :left_text_3, class: "form-control", placeholder: t('.left_text_3')
+                        br
+                        = ff.text_field :right_title_1, class: "form-control", placeholder: t('.right_title_1')
+                        br
+                        = ff.text_area :right_des_1, rows: 5, class: "form-control", placeholder: t('.right_des_1')
+                        br
+                        = ff.text_field :right_title_2, class: "form-control", placeholder: t('.right_title_2')
+                        br
+                        = ff.text_area :right_des_2, rows: 5, class: "form-control", placeholder: t('.right_des_2')
+                        br
+                        = ff.text_field :right_title_3, class: "form-control", placeholder: t('.right_title_3')
+                        br
+                        = ff.text_area :right_des_3, rows: 5, class: "form-control", placeholder: t('.right_des_3')
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.fr')
+                    .box-body
+                      = f.fields_for :origine_languages, @origine_fr do |ff|
+                        = ff.text_field :left_text_1, class: "form-control", placeholder: t('.left_text_1')
+                        br
+                        = ff.text_field :left_text_2, class: "form-control", placeholder: t('.left_text_2')
+                        br
+                        = ff.text_field :left_text_3, class: "form-control", placeholder: t('.left_text_3')
+                        br
+                        = ff.text_field :right_title_1, class: "form-control", placeholder: t('.right_title_1')
+                        br
+                        = ff.text_area :right_des_1, rows: 5, class: "form-control", placeholder: t('.right_des_1')
+                        br
+                        = ff.text_field :right_title_2, class: "form-control", placeholder: t('.right_title_2')
+                        br
+                        = ff.text_area :right_des_2, rows: 5, class: "form-control", placeholder: t('.right_des_2')
+                        br
+                        = ff.text_field :right_title_3, class: "form-control", placeholder: t('.right_title_3')
+                        br
+                        = ff.text_area :right_des_3, rows: 5, class: "form-control", placeholder: t('.right_des_3')
+            .form-group
+              = f.submit t(".update"), class: "form-control btn btn-primary btn-flat"
