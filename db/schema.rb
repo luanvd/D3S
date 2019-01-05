@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190105014659) do
+ActiveRecord::Schema.define(version: 20190105063416) do
 
   create_table "d3s_information_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "d3s_information_id"
@@ -29,6 +29,30 @@ ActiveRecord::Schema.define(version: 20190105014659) do
     t.string "name"
     t.string "image_1"
     t.string "image_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "origine_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "language"
+    t.string "left_text_1"
+    t.string "left_text_2"
+    t.string "left_text_3"
+    t.string "right_title_1"
+    t.string "right_title_2"
+    t.string "right_title_3"
+    t.string "right_des_1"
+    t.string "right_des_2"
+    t.string "right_des_3"
+    t.bigint "origine_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["origine_id"], name: "index_origine_languages_on_origine_id"
+  end
+
+  create_table "origines", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -66,4 +90,5 @@ ActiveRecord::Schema.define(version: 20190105014659) do
   end
 
   add_foreign_key "d3s_information_languages", "d3s_informations"
+  add_foreign_key "origine_languages", "origines"
 end

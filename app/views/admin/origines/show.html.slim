@@ -1,0 +1,71 @@
+- provide :title, t('.origine_title')
+section.content-header
+  = link_to t('.edit'), edit_admin_origines_path, class: 'btn bg-purple margin'
+- if @origine.present?
+  section.content
+    .row
+      .col-xs-8
+        .box.box-info
+          .box-header
+            h3.box-title
+              = t('.origine_title')
+          .box-body
+            .text-center= t('.image_background')
+            br
+            .row
+              .col-xs-4.col-xs-offset-4
+                = image_tag @origine.image, height: 200
+- else
+  p.text-center
+    | There are no data
+
+section.content
+  .row
+    .col-xs-8
+      .box.box-info
+        .box-header
+          h3.box-title
+            = t('.origine_lang_title')
+        .box-body
+          table#about-table.table.table-bordered.table-hover
+            - thead = ['', t('.language.en'), t('.language.fr')]
+            thead
+              - thead.each do |th|
+                th.text-center= th
+            tbody
+              tr
+                td.text-center= t('.left_text_1')
+                td.text-center= @origine_en.left_text_1
+                td.text-center= @origine_fr.left_text_1
+              tr
+                td.text-center= t('.left_text_2')
+                td.text-center= @origine_en.left_text_2
+                td.text-center= @origine_fr.left_text_2
+              tr
+                td.text-center= t('.left_text_3')
+                td.text-center= @origine_en.left_text_3
+                td.text-center= @origine_fr.left_text_3
+              tr
+                td.text-center= t('.right_title_1')
+                td.text-center= @origine_en.right_title_1
+                td.text-center= @origine_fr.right_title_1
+              tr
+                td.text-center= t('.right_des_1')
+                td.text-center= @origine_en.right_des_1
+                td.text-center= @origine_fr.right_des_1
+              tr
+                td.text-center= t('.right_title_2')
+                td.text-center= @origine_en.right_title_2
+                td.text-center= @origine_fr.right_title_2
+              tr
+                td.text-center= t('.right_des_2')
+                td.text-center= @origine_en.right_des_2
+                td.text-center= @origine_fr.right_des_2
+              tr
+                td.text-center= t('.right_title_3')
+                td.text-center= @origine_en.right_title_3
+                td.text-center= @origine_fr.right_title_3
+              tr
+                td.text-center= t('.right_des_3')
+                td.text-center= @origine_en.right_des_3
+                td.text-center= @origine_fr.right_des_3

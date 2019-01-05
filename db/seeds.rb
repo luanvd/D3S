@@ -31,3 +31,29 @@ d3s_infor_en = D3sInformation.first.d3s_information_languages.build(language: "e
 	des_2: "D3S's mission is to bring to your table the unique and original taste of exceptional fruits cultivated in certain unspoiled regions of the world.",
 	des_middle: "Enabling consumers in Europe and around the world to discover or rediscover exceptional products It is with this goal in mind that D3S has recruited and trained the staff working today in its first factory installed since 2017 close to harvest areas of Sine Saloum.")
 d3s_infor_en.save
+
+puts "create origine"
+Origine.create(name: "Origine", image: open("https://res.cloudinary.com/dev02l2pv/image/upload/v1546672426/xggm3hsn15b3yzpssdgo.jpg"))
+origine_en = Origine.first.origine_languages.build(language: "en",
+  left_text_1: "EXCEPTIONAL PRODUCT, EXCEPTIONAL ORIGIN",
+  left_text_2: "THE REGIONS OF ORIGIN OF OUR PRODUCTS ARE REGIONS STILL PRESERVED FROM ALL INTENSIVE AGRICULTURE",
+  left_text_3: "The regions of origin of our products are regions still preserved from intensive agriculture",
+  right_title_1: "Hybrid territory between land and sea,",
+  right_des_1: "The delta of Sine Saloum is made up of hundreds of islands and islets covered sometimes with earth, sometimes with mangroves.",
+  right_title_2: "The Saloum Delta",
+  right_des_2: "Is transformed into thousands of water channels hosting one of the richest protected ecosystems in Africa, listed since 1981 as a World Biosphere Reserve and World Heritage Site by UNESCO.",
+  right_title_3: "The land of Sine Saloum is generous and its varied patrimony",
+  right_des_3: "Mango, cashew apple, tamarind, coconut, monkey bread, ditakh, jujube, citrus, papaya, bissap, okra, loofah, etc ... and it is in this preserve preserved that D3S has installed its first fruit preparation unit.")
+origine_en.save
+
+origine_fr = Origine.first.origine_languages.build(language: "fr",
+  left_text_1: "A PRODUIT EXCEPTIONNEL, ORIGINE EXCEPTIONNELLE",
+  left_text_2: "LES RÉGIONS D'ORIGINE DE NOS PRODUITS SONT DES RÉGIONS ENCORE PRÉSERVÉES DE TOUTE AGRICULTURE INTENSIVE",
+  left_text_3: "Les régions d'origine de nos produits sont des régions encore préservées de toute agriculture intensive",
+  right_title_1: "Territoire hybride entre terre et mer,",
+  right_des_1: "Le delta du Sine Saloum est constitué de de centaines d’îles et d’îlots recouverts tantôt de terre, tantôt de palétuviers.",
+  right_title_2: "Le delta du Saloum",
+  right_des_2: "Se transforme en milliers de canaux d’eau hébergeant l’un des écosystèmes protégé les plus riches d’Afrique, classé depuis 1981 comme Réserve Mondiale de la Biosphère et inscrit au Patrimoine mondial de l’UNESCO.",
+  right_title_3: "La terre du Sine Saloum est généreuse et sonpatrimoine nourricier varié",
+  right_des_3: "Mangue, pomme cajou, tamarin, noix de coco, pain de singe, ditakh, jujube,agrumes, papaye, bissap, gombo, loofah, etc… et c’est dans cet écrin préservé que D3S a installé sa première unité de préparation de fruits." )
+origine_fr.save

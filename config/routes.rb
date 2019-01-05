@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resource :slider_shows, only: [:show, :edit, :update]
       resources :slider_images, only: :update
       resource :d3s_informations, only: [:show, :edit, :update]
+      resource :origines, only: [:show, :edit, :update]
     end
   end
 end
