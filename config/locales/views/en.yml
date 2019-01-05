@@ -1,5 +1,21 @@
 en:
+  submit: &submit "Submit"
+  edit: &edit "Edit"
   admin:
+    slider_shows:
+      show:
+        edit: "Edit slider show"
+        slider_show: "Slider Show"
+        title_image: Title Image
+        image: "Image"
+        submit: *submit
+      edit:
+        submit: *submit
+        title_image: "Title image"
+        sort_index: "Sort index"
+        image: "Image"
+        remove_this_image: "Remove this image"
+        add_a_image: "Add a Image"
     users:
       index:
         users: "Users"

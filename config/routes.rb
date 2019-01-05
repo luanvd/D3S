@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       root :to => "users#index"
       resources :users
       resource :slider_shows, only: [:show, :edit, :update]
+      resources :slider_images, only: :update
       resource :d3s_informations, only: [:show, :edit, :update]
     end
   end

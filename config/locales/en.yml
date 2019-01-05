@@ -37,3 +37,9 @@ en:
           attributes:
             name: "Name"
             role: "User Role"
+        slider_show:
+          attributes:
+            title_image: "Title Image"
+        slider_image:
+          attributes:
+            image: "Image"

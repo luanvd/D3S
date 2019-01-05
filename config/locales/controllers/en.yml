@@ -1,1 +1,10 @@
 en:
+  admin:
+    slider_images:
+      update:
+        success: Update slider image successfully
+        failed: Update slider image failed
+    slider_shows:
+      update:
+        success: Update slider show successfully
+        failed: Update slider show failed
