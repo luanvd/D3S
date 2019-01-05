@@ -1,0 +1,17 @@
+= f.fields_for :engagement_translations, engagement_translations do |ff|
+  = ff.hidden_field :language
+  p
+    = tranlations_version ff.object.language
+  .form-group
+    = ff.label :title, class: "col-md-2 control-label" do
+      = t ".title"
+    .col-md-10
+      = ff.text_field :title, class: "form-control"
+
+  .form-group
+    = ff.label :content, class: "col-md-2 control-label" do
+      = t ".content"
+    .col-md-10
+      = ff.text_area :content, class: "form-control", rows: 10
+  
+  hr

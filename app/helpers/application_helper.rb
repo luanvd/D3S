@@ -26,5 +26,13 @@ module ApplicationHelper
       </div>
     HTML
     error_field.html_safe if form.object.errors[attribute].present?
-  end   
+  end
+
+  def tranlations_version code
+    "#{Settings.languages.to_h[code.to_sym]} version"
+  end
+
+  def tranlations_name code
+    Settings.languages.to_h[code.to_sym]
+  end
 end

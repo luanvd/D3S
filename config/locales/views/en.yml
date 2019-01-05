@@ -2,6 +2,23 @@ en:
   submit: &submit "Submit"
   edit: &edit "Edit"
   admin:
+    engagements:
+      index:
+        title: "%{language} Title"
+        content: "%{language} Content"
+        show: Show
+        edit: Edit
+        delete: delete
+        confirm_delete_engagement: "Delete this engagement, are you sure?"
+      form:
+        title: "Title"
+        content: "Content"
+      new:
+        submit: *submit
+        create_engagement: Create Engagement
+      edit:
+        submit: *submit
+        edit_engagement: Edit Engagement
     slider_shows:
       show:
         edit: "Edit slider show"
@@ -98,3 +115,5 @@ en:
     admin:
       left_bar:
         d3s_information: "About"
+        slider_show: Slider
+        engagement: Engagement
