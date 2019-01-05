@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :users
       resources :slider_images, only: :update
       resources :engagements
+      resources :producers, except: :show
 
       resource :slider_shows, only: [:show, :edit, :update]
       resource :d3s_informations, only: [:show, :edit, :update]

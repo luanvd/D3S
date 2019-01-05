@@ -15,6 +15,16 @@ en:
       update:
         success: update engagement successfully
         failed: update engagement failed
-      delete:
+      destroy:
         success: delete engagement successfully
         failed: delete engagement failed
+    producers:
+      create:
+        success: creat producer successfully
+        failed: creat producer failed
+      update:
+        success: update producer successfully
+        failed: update producer failed
+      destroy:
+        success: delete producer successfully
+        failed: delete producer failed

@@ -19,6 +19,23 @@ en:
       edit:
         submit: *submit
         edit_engagement: Edit Engagement
+    producers:
+      index:
+        title: "%{language} Title"
+        content: "%{language} Content"
+        show: Show
+        edit: Edit
+        delete: delete
+        confirm_delete_producer: "Delete this producer, are you sure?"
+      form:
+        title: "Title"
+        content: "Content"
+      new:
+        submit: *submit
+        create_producer: Create Producer
+      edit:
+        submit: *submit
+        edit_producer: Edit Producer
     slider_shows:
       show:
         edit: "Edit slider show"
