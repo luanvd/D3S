@@ -3,16 +3,33 @@ section.content-header
   = link_to t(".edit"), edit_admin_slider_shows_path, class: 'btn bg-purple margin', id: "admin-edit-slider"
 - if @slider_show.present?
   section.content
-    table.table.table-bordered.table-striped
-      thead
-        th = t ".caption"
-        th = t ".sort_index"
-        th = t ".image"
-      tbody
-        - @slider_images.each do |slider_image|
-          tr
-            td = slider_image.caption
-            td = slider_image.sort_index
-            td
-              = link_to slider_image.image_url, "target": "blank" do
-                = image_tag slider_image.image_url, height: 200
+    .row
+      .col-xs-12
+        .box.box-info
+          .box-header
+            h3.box-title Slider images list
+          .box-body
+            table.table.table-bordered.table-striped
+              thead
+                th = t ".type"
+                th = t ".image"
+                th = t ".sort_index"
+              tbody
+                tr
+                  td = t ".title_image"
+                  td
+                    = link_to @slider_show.title_image_url, "target": "blank" do
+                        = image_tag @slider_show.title_image_url, height: 200
+                  td N/A
+
+                - @slider_images.each do |slider_image|
+                  tr
+                    td = t ".image"
+                    td
+                      = link_to slider_image.image_url, "target": "blank" do
+                        = image_tag slider_image.image_url, height: 200
+                    td
+                      = form_for [:admin, slider_image], html: {class: "form-inline form-horizontal"} do |f|
+                        = f.text_field :sort_index, class: "form-control mg-r-5"
+                        = f.submit t(".submit"), class: "btn btn-primary btn-flat"
+            

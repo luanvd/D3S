@@ -1,2 +1,15 @@
 fr:
   hello: "Bonjour le monde"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name: "Name"
+            role: "User Role"
+        slider_show:
+          attributes:
+            title_image: "Title Image"
+        slider_image:
+          attributes:
+            image: "Image"
