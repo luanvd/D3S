@@ -1,5 +1,6 @@
 class SliderShow < ApplicationRecord
-  mount_uploader :title_image, ImageUploader
+  mount_uploader :title_image_1, ImageUploader
+  mount_uploader :title_image_2, ImageUploader
 
   has_many :slider_images
 
