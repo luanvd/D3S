@@ -26,7 +26,7 @@ class Admin::SliderShowsController < AdminController
 
   private
   def slider_show_params
-    params.require(:slider_show).permit(:title_image, slider_images_attributes: [:id, :slider_show_id, :image, :_destroy])
+    params.require(:slider_show).permit(:title_image_1, :title_image_2, slider_images_attributes: [:id, :slider_show_id, :image, :_destroy])
   end
 
   def load_slider_show

@@ -40,10 +40,13 @@ en:
       show:
         edit: "Edit slider show"
         slider_show: "Slider Show"
-        title_image: Title Image
+        title_image_1: Title Image 1
+        title_image_2: Title Image 2
         image: "Image"
         submit: *submit
       edit:
+        title_image_1: Title Image 1
+        title_image_2: Title Image 2
         submit: *submit
         title_image: "Title image"
         sort_index: "Sort index"

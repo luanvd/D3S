@@ -7,10 +7,15 @@ section.content
         .box-body
           = nested_form_for @slider_show, url: admin_slider_shows_path, html: {class: "form-horizontal"} do |f|
             .form-group
-              = f.label :title_image, class: "col-md-2 control-label" do
-                = t ".title_image"
+              = f.label :title_image_1, class: "col-md-2 control-label" do
+                = t ".title_image_1"
               .col-md-10
-                = f.file_field :title_image, class: "form-control"
+                = f.file_field :title_image_1, class: "form-control"
+            .form-group
+              = f.label :title_image_2, class: "col-md-2 control-label" do
+                = t ".title_image_2"
+              .col-md-10
+                = f.file_field :title_image_2, class: "form-control"
             
             hr
 

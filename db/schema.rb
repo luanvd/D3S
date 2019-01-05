@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190105141429) do
+ActiveRecord::Schema.define(version: 20190105165605) do
 
   create_table "d3s_information_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "d3s_information_id"
@@ -103,7 +103,8 @@ ActiveRecord::Schema.define(version: 20190105141429) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title_image"
+    t.string "title_image_1"
+    t.string "title_image_2"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

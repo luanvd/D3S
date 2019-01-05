@@ -16,10 +16,18 @@ section.content-header
                 th = t ".sort_index"
               tbody
                 tr
-                  td = t ".title_image"
+                  td = t ".title_image_1"
                   td
-                    = link_to @slider_show.title_image_url, "target": "blank" do
-                        = image_tag @slider_show.title_image_url, height: 200
+                    -if @slider_show.title_image_1
+                      = link_to @slider_show.title_image_1_url, "target": "blank" do
+                        = image_tag @slider_show.title_image_1_url, class: "image_in_table"
+                  td N/A
+                tr
+                  td = t ".title_image_2"
+                  td
+                    -if @slider_show.title_image_2
+                      = link_to @slider_show.title_image_2_url, "target": "blank" do
+                        = image_tag @slider_show.title_image_2_url, class: "image_in_table"
                   td N/A
 
                 - @slider_images.each do |slider_image|
@@ -27,7 +35,7 @@ section.content-header
                     td = t ".image"
                     td
                       = link_to slider_image.image_url, "target": "blank" do
-                        = image_tag slider_image.image_url, height: 200
+                        = image_tag slider_image.image_url, class: "image_in_table"
                     td
                       = form_for [:admin, slider_image], html: {class: "form-inline form-horizontal"} do |f|
                         = f.text_field :sort_index, class: "form-control mg-r-5"
