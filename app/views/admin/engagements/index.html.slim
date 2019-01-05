@@ -1,0 +1,32 @@
+- provide :title, t('.users')
+section.content-header
+  = link_to t('.new_engagement'), new_admin_engagement_path, class: 'btn bg-purple margin'
+
+- if @engagements.any?
+  section.content
+    .row
+      .col-xs-12
+        .box.box-info
+          .box-header
+            h3.box-title Engagement list
+          .box-body
+            table.table.table-bordered.table-striped
+              thead
+                th = t ".index"
+                - Settings.translation_languages.each do |lang|
+                  th = t ".title", language: tranlations_name(lang)
+                  th = t ".content", language: tranlations_name(lang)
+                th = t ".action"
+              tbody
+                - @engagements.each_with_index do |engagement, index|
+                  tr
+                    td = index + 1
+                    - Settings.translation_languages.each do |lang|
+                      - engagement_translation = engagement.by_localize(lang)
+                      td = engagement_translation.title
+                      td = simple_format engagement_translation.content
+                    td
+                      = link_to t(".show"), admin_engagement_path(engagement), class: "btn btn-flat btn-primary mg-r-5"
+                      = link_to t(".edit"), edit_admin_engagement_path(engagement), class: "btn btn-flat btn-success mg-r-5"
+                      = link_to t(".delete"), admin_engagement_path(engagement), method: :delete,
+                        "data-confirm": t(".confirm_delete_engagement"), class: "btn btn-flat btn-danger mg-r-5"
