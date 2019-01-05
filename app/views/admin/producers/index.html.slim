@@ -1,0 +1,33 @@
+- provide :title, t('.users')
+section.content-header
+  = link_to t('.new_producer'), new_admin_producer_path, class: 'btn bg-purple margin'
+
+- if @producers.any?
+  section.content
+    .row
+      .col-xs-12
+        .box.box-info
+          .box-header
+            h3.box-title producer list
+          .box-body
+            table.table.table-bordered.table-striped
+              thead
+                th = t ".index"
+                th = t ".image"
+                - Settings.translation_languages.each do |lang|
+                  th = t ".title", language: tranlations_name(lang)
+                th = t ".action"
+              tbody
+                - @producers.each_with_index do |producer, index|
+                  tr
+                    td = index + 1
+                    td
+                      = link_to producer.image_url, "target": "blank" do
+                        = image_tag producer.image_url, height: 200
+                    - Settings.translation_languages.each do |lang|
+                      - producer_translation = producer.by_localize(lang)
+                      td = producer_translation.title
+                    td
+                      = link_to t(".edit"), edit_admin_producer_path(producer), class: "btn btn-flat btn-success mg-r-5"
+                      = link_to t(".delete"), admin_producer_path(producer), method: :delete,
+                        "data-confirm": t(".confirm_delete_producer"), class: "btn btn-flat btn-danger mg-r-5"

@@ -1,0 +1,10 @@
+section.content
+  .row
+    .col-md-8.col-md-offset-2
+      .box.box-success
+        .box-header.with-border.text-center
+          h3.box-title= t('.edit_producer')
+        .box-body
+          = form_for [:admin, @producer], html: {class: "form-horizontal"} do |f|
+            = render "form", f: f, producer_translations: @producer_translations
+            = f.submit t(".submit"), class: "form-control btn btn-block btn-primary btn-flat"
