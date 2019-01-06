@@ -2,6 +2,13 @@ fr:
   submit: &submit "Submit"
   edit: &edit "Edit"
   admin:
+    popups:
+      show:
+        popups: Popups
+        edit_popup: Edit Popup
+      edit:
+        edit_popup: Edit Popup
+        submit: Update Popup
     engagements:
       index:
         title: "%{language} Title"
