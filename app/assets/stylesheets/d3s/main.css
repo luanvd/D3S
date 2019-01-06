@@ -2269,7 +2269,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-bottom: 50px; }
 
 .aclculation-area {
-  background: rgba(0, 0, 0, 0.7) url(../img/section1-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section1-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin-top: 50px; }
   .aclculation-area .overlay-bg {
@@ -2336,36 +2336,36 @@ body.mobile-nav-active #mobile-nav-toggle {
       color: #fff; }
 
 .aclculation-area-bg {
-  background: rgba(0, 0, 0, 0.7) url(../img/section5-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section5-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin-top: 50px; }
 
 .aclculation-area-bg4 {
-  background: rgba(0, 0, 0, 0.7) url(../img/section4-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section4-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin: 50px 0;
   background-size: 100%; }
 
 .aclculation-area-bg7 {
-  background: rgba(0, 0, 0, 0.7) url(../img/section7-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section7-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin: 50px 0;
   background-size: 100%; }
 
 .aclculation-area-bg8 {
-  background: rgba(0, 0, 0, 0.7) url(../img/section8-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section8-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin: 50px 0;
   background-size: 100%; }
 
 .aclculation-area-bg9 {
-  background: rgba(0, 0, 0, 0.7) url(../img/section9-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section9-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin: 50px 0;
   background-size: 100%; }
 
 .aclculation-area-bg10 {
-  background: rgba(0, 0, 0, 0.7) url(../img/section10-bg.png) no-repeat center center;
+  background: rgba(0, 0, 0, 0.7) url(/assets/section10-bg.png) no-repeat center center;
   background-attachment: fixed;
   margin: 50px 0;
   background-size: 100%; }
