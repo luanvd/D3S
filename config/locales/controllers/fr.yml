@@ -28,3 +28,7 @@ fr:
       destroy:
         success: delete producer successfully
         failed: delete producer failed
+    popups:
+      update:
+        success: update popup successfully
+        failed: update popup failed
