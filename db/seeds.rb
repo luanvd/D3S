@@ -57,3 +57,12 @@ origine_fr = Origine.first.origine_languages.build(language: "fr",
   right_title_3: "La terre du Sine Saloum est généreuse et sonpatrimoine nourricier varié",
   right_des_3: "Mangue, pomme cajou, tamarin, noix de coco, pain de singe, ditakh, jujube,agrumes, papaye, bissap, gombo, loofah, etc… et c’est dans cet écrin préservé que D3S a installé sa première unité de préparation de fruits." )
 origine_fr.save
+
+puts "create_popup"
+popup = Popup.create(name: "default")
+
+en_popup = popup.popup_translations.new(language: "en")
+en_popup.save(validates: false)
+
+fr_popup = popup.popup_translations.new(language: "fr")
+fr_popup.save(validates: false)

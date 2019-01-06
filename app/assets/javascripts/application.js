@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require ckeditor/init
 //= require adminlte.min
 //= require jquery.min
 //= require icheck.min
@@ -25,3 +25,4 @@
 //= require intlTelInput.min
 //= require jquery_nested_form
 //= require preview_image
+//= require_tree .

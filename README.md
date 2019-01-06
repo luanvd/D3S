@@ -22,3 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+errors: 
+* MiniMagick::Error (You must have ImageMagick or GraphicsMagick installed)
+ubuntu: sudo apt-get install libmagickwand-dev
+osx: brew install imagemagick

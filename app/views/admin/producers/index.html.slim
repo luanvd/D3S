@@ -1,4 +1,4 @@
-- provide :title, t('.users')
+- provide :title, t('.producers')
 section.content-header
   = link_to t('.new_producer'), new_admin_producer_path, class: 'btn bg-purple margin'
 
@@ -26,7 +26,7 @@ section.content-header
                         = image_tag producer.image_url, class: "image_in_table"
                     - Settings.translation_languages.each do |lang|
                       - producer_translation = producer.by_localize(lang)
-                      td = producer_translation.title
+                      td = producer_translation&.title
                     td
                       = link_to t(".edit"), edit_admin_producer_path(producer), class: "btn btn-flat btn-success mg-r-5"
                       = link_to t(".delete"), admin_producer_path(producer), method: :delete,

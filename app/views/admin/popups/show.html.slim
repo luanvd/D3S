@@ -1,0 +1,16 @@
+- provide :title, t('.popups')
+section.content-header
+  = link_to t('.edit_popup'), edit_admin_popups_path, class: 'btn bg-purple margin'
+- if @popup
+  section.content
+    .row
+      .col-xs-12
+        - @popup_translations.each do |popup_translation|
+          .box.box-info
+            .box-header
+              h3.box-title = tranlations_version popup_translation.language
+            .box-body
+              h2 = popup_translation.title
+              div
+                = raw popup_translation.content
+                

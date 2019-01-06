@@ -1,0 +1,28 @@
+section.content
+  .row
+    .col-md-8.col-md-offset-2
+      .box.box-success
+        .box-header.with-border.text-center
+          h3.box-title= t('.edit_popup')
+        .box-body
+          = form_for @popup, url: admin_popups_path, html: {class: "form-horizontal"} do |f|
+            = f.fields_for :popup_translations, @popup_translations do |ff|
+              = ff.hidden_field :language
+              p
+                = tranlations_version ff.object.language
+              .form-group
+                = ff.label :title, class: "col-md-2 control-label" do
+                  = t ".title"
+                .col-md-10
+                  = ff.text_field :title, class: "form-control"
+
+              .form-group
+                = ff.label :content, class: "col-md-2 control-label" do
+                  = t ".content"
+                .col-md-10
+                  = ff.cktext_area :content, class: "form-control"
+              hr
+            
+            = f.submit t(".submit"), class: "form-control btn btn-block btn-primary btn-flat"
+          
+          
