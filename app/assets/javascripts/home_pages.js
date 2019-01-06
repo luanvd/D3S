@@ -15,4 +15,3 @@
 //= require bootstrap.min
 //= require d3s/slick.min.js
 //= require d3s/main
-//= require_tree .
