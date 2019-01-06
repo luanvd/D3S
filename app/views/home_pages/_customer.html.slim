@@ -1,0 +1,15 @@
+= simple_form_for @customer, defaults: {label: false}, url: customers_path do |f|
+  .mt-10
+    label= t(".name")
+    = f.input :name, input_html: { class: "single-input" }, placeholder: t(".placeholder.name")
+  .mt-10
+    label Email
+    = f.input :email, input_html: { class: "single-input" }, placeholder: t(".placeholder.email")
+  .mt-10
+    label Message
+    = f.input :message, input_html: { class: "single-textarea single-input" }, placeholder: t(".placeholder.message")
+  .mt-10
+    label Company
+    = f.input :company, input_html: { class: "single-input" }, placeholder: t(".placeholder.company")
+  .sunmit.mt-10  
+    = f.submit t(".submit"), class: "genric-btn success medium"

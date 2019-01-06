@@ -1,6 +1,25 @@
 en:
   submit: &submit "Submit"
   edit: &edit "Edit"
+  home_pages:
+    customer:
+      name: "Name"
+      email: "Email"
+      message: "Message"
+      company: "Company"
+      placeholder:
+        name: "Enter Name"
+        email: "Enter Email"
+        message: "Enter Your Message"
+        company: "Enter Company"
+      submit: *submit
+  customer_mailer:
+    send_email_create_customer:
+      new_customer: "New customer information"
+      name: "Name"
+      email: "Email"
+      message: "Message"
+      company: "Company"
   admin:
     popups:
       show:
