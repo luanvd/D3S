@@ -1,6 +1,10 @@
 en:
   submit: &submit "Submit"
   edit: &edit "Edit"
+  no_data: &no_data "There are no data"
+  view: &view "View"
+  delete: &delete "Delete"
+  back_to_list: &back_to_list "Back to list"
   home_pages:
     customer:
       name: "Name"
@@ -38,6 +42,27 @@ en:
       edit:
         submit: *submit
         edit_product: Edit Producer
+    customers:
+      index:
+        no_data: *no_data
+        customers: "Customers List"
+        id: "ID"
+        name: "Name"
+        email: "Email"
+        message: "Message"
+        company: "Company"
+        actions: "Actions"
+        view: *view
+        delete: *delete
+      show:
+        customer: "Customer Detail"
+        delete: *delete
+        id: "ID"
+        name: "Name"
+        email: "Email"
+        message: "Message"
+        company: "Company"        
+        back_to_list: *back_to_list
     popups:
       show:
         popups: Popups
@@ -100,8 +125,28 @@ en:
       index:
         users: "Users"
         new_user: "New User"
+        user_list: "User List"
+        id: "ID"
+        name: "Name"
+        email: "Email"
+        avatar: "Avatar"
+        role: "Role"
+        actions: "Actions"
+        view: *view
+        edit: *edit
+        delete: *delete
       new:
         create_user: "Create User"
+      show:
+        user: "User Profile"
+        id: "ID"
+        name: "Name"
+        role: "Role"
+        email: "Email"
+        avatar: "Avatar"
+        edit: *edit
+        delete: *delete
+        back_to_list: *back_to_list
     origines:
       show:
         edit: "Edit"
@@ -180,3 +225,4 @@ en:
         d3s_information: "About"
         slider_show: Slider
         engagement: Engagement
+        customers: "Customers"

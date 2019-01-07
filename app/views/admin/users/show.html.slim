@@ -1,27 +1,28 @@
-- provide :title, t('users')
+- provide :title, t('.user')
 section.content#admin-user-profile
   .row
     .col-xs-12
       .box.box-info
         .box-header
-          h3.box-title User detail
+          h3.box-title
+            = t('.user')
         .box-body
           table.table.table-bordered.table-striped
             tbody
               tr
-                td.font-weight-bold ID
+                td.font-weight-bold= t('.id')
                 td= @user.id
               tr
-                td.font-weight-bold Email
+                td.font-weight-bold= t('.email')
                 td= @user.email
               tr
-                td.font-weight-bold Name
+                td.font-weight-bold= t('.name')
                 td= @user.name
               tr
-                td.font-weight-bold Role
+                td.font-weight-bold= t('.role')
                 td= @user.role.capitalize
               tr
-                td.font-weight-bold Avatar
+                td.font-weight-bold= t('.avatar')
                 td
                   - if @user.user_avatar.present?
                     = image_tag @user.user_avatar.url(:thumb)
@@ -29,8 +30,8 @@ section.content#admin-user-profile
                     = image_tag 'no_image.png', size: "100x100"
               tr
                 td colspan="2"
-                  = link_to "Back to list", admin_users_path, class: 'btn btn-success'
+                  = link_to t('.back_to_list'), admin_users_path, class: 'btn btn-success'
                   | &nbsp;
-                  = link_to "Edit", edit_admin_user_path(@user), class: 'btn btn-info'
+                  = link_to t('.edit'), edit_admin_user_path(@user), class: 'btn btn-info'
                   | &nbsp;
-                  = link_to "Delete", nil, class: 'btn btn-danger'
+                  = link_to t('.delete'), nil, class: 'btn btn-danger'

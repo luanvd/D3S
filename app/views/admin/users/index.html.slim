@@ -7,10 +7,11 @@ section.content-header
       .col-xs-12
         .box.box-info
           .box-header
-            h3.box-title User list
+            h3.box-title
+              = t(".user_list")
           .box-body
             table#users-table.table.table-bordered.table-hover
-              - thead = %w(ID Email Name Role Avatar Actions)
+              - thead = [t('.id'), t('.name'), t('.email'), t('.role'), t('.avatar'), t('.actions')]
               thead
                 - thead.each do |th|
                   th= th
@@ -18,17 +19,17 @@ section.content-header
                 - @users.each do |user|
                   tr
                     td= user.id
-                    td= user.email
                     td= user.name
+                    td= user.email
                     td= user.role
                     td
                       = image_tag 'no_image.png', size: "100x100"
                     td.actions
-                      = link_to "View", admin_user_path(user), class: 'btn label label-success'
+                      = link_to t('.view'), admin_user_path(user), class: 'btn label label-success'
                       | &nbsp;
-                      = link_to "Edit", edit_admin_user_path(user), class: 'btn label label-info'
+                      = link_to t('.edit'), edit_admin_user_path(user), class: 'btn label label-info'
                       | &nbsp;
-                      = link_to "Delete", admin_user_path(user),
+                      = link_to t('.delete'), admin_user_path(user),
                         method: :delete, data: {confirm: 'Are you sure to delete this user?'},
                         class: 'btn label label-danger'
 - else

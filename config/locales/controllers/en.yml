@@ -2,8 +2,14 @@ en:
   admin:
     users:
       create:
-        fail: "Create failed"
+        failed: "Create failed"
         success: "Create successed"
+      update:
+        success: "Update user successfully"
+        failed: "Update user failed"
+      destroy:
+        success: "Delete user successfully"
+        failed: "Delete user failed"
     slider_images:
       update:
         success: Update slider image successfully
@@ -14,35 +20,39 @@ en:
         failed: Update slider show failed
     engagements:
       create:
-        success: creat engagement successfully
-        failed: creat engagement failed
+        success: Create engagement successfully
+        failed: Create engagement failed
       update:
-        success: update engagement successfully
-        failed: update engagement failed
+        success: Update engagement successfully
+        failed: Update engagement failed
       destroy:
-        success: delete engagement successfully
-        failed: delete engagement failed
+        success: Delete engagement successfully
+        failed: Delete engagement failed
     producers:
       create:
-        success: creat producer successfully
-        failed: creat producer failed
+        success: Create producer successfully
+        failed: Create producer failed
       update:
-        success: update producer successfully
-        failed: update producer failed
+        success: Update producer successfully
+        failed: Update producer failed
       destroy:
-        success: delete producer successfully
-        failed: delete producer failed
+        success: Delete producer successfully
+        failed: Delete producer failed
     popups:
       update:
-        success: update popup successfully
-        failed: update popup failed
+        success: Update popup successfully
+        failed: Update popup failed
     products:
       create:
-        success: creat product successfully
-        failed: creat product failed
+        success: Create product successfully
+        failed: Create product failed
       update:
-        success: update product successfully
-        failed: update product failed
+        success: Update product successfully
+        failed: Update product failed
       destroy:
-        success: delete product successfully
-        failed: delete product failed
+        success: Delete product successfully
+        failed: Delete product failed
+    customers:
+      destroy:
+        success: Delete customer successfully
+        failed: Delete customer failed

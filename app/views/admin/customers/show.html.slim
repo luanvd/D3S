@@ -1,0 +1,32 @@
+- provide :title, t('.customer')
+section.content#admin-customer-detail
+  .row
+    .col-xs-12
+      .box.box-info
+        .box-header
+          h3.box-title
+            = t('.customer')
+        .box-body
+          table.table.table-bordered.table-striped
+            tbody
+              tr
+                td.font-weight-bold= t('.id')
+                td= @customer.id
+              tr
+                td.font-weight-bold= t('.name')
+                td= @customer.name
+              tr
+                td.font-weight-bold= t('.email')
+                td= @customer.email
+              tr
+                td.font-weight-bold= t('.message')
+                td= @customer.message
+              tr
+                td.font-weight-bold= t('.company')
+                td= @customer.company                
+              tr
+                td colspan="2"
+                  = link_to t('.back_to_list'), admin_customers_path, class: 'btn btn-success'
+                  | &nbsp;
+                  = link_to t('.delete'), nil, class: 'btn btn-danger'
+

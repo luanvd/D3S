@@ -30,25 +30,29 @@ aside.main-sidebar
           span = t ".d3s_information"
       li
         = link_to admin_slider_shows_path, id: "left-bar-admin-slider" do
-          i.fa.fa-user
+          i.fa.fa-image
           span = t ".slider_show"
       li
         = link_to admin_origines_path, id: "left-bar-admin-origine" do
-          i.fa.fa-sticky-note
+          i.fa.fa-star
           span = t ".origine"
       li
         = link_to admin_engagements_path, id: "left-bar-admin-engagement" do
-          i.fa.fa-user
+          i.fa.fa-american-sign-language-interpreting
           span = t ".engagement"
       li
-        = link_to admin_producers_path, id: "left-bar-admin-engagement" do
-          i.fa.fa-user
+        = link_to admin_producers_path, id: "left-bar-admin-producers" do
+          i.fa.fa-industry
           span = t ".producer"
       li
-        = link_to admin_popups_path, id: "left-bar-admin-engagement" do
-          i.fa.fa-user
+        = link_to admin_popups_path, id: "left-bar-admin-popups" do
+          i.fa.fa-upload
           span = t ".popups"
       li
         = link_to admin_products_path, id: "left-bar-admin-engagement" do
-          i.fa.fa-user
+          i.fa.fa-apple
           span = t ".products"
+      li
+        = link_to admin_customers_path, id: "left-bar-admin-customer" do
+          i.fa.fa-address-book
+          span = t ".customers"
