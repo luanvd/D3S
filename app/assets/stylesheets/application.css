@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_tree ./admin
  *= require bootstrap.min
  *= require ionicons.min
  *= require dataTables.bootstrap.min
@@ -17,6 +18,6 @@
  *= require all_skins
  *= require blue
  *= require font-awesome
- *= require custom
+ *= require admin/custom
  *= require intlTelInput.min
  */
