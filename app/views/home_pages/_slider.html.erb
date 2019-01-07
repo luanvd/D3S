@@ -1,0 +1,15 @@
+<section class="banner-area relative slider" id="home">
+  <div class="slider-img">
+    <% @slider_images.each do |img| %>
+      <div class="item">
+        <%= image_tag img.image %>
+      </div>
+    <% end %>
+  </div>
+  <div class="banner-img">
+    <div class="content-banner">
+        <%= image_tag @slider_show.title_image_1 %>
+        <%= image_tag @slider_show.title_image_2, class: "img-banner2" %>
+    </div>
+  </div>
+</section>
