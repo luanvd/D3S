@@ -1,0 +1,33 @@
+- provide :title, t('.customers')
+section.content-header
+- if @customers.any?
+  section.content
+    .row
+      .col-xs-12
+        .box.box-info
+          .box-header
+            h3.box-title
+              = t(".customers")
+          .box-body
+            table#customers-table.table.table-bordered.table-hover
+              - thead = [t(".id"), t(".name"), t(".email"), t(".message"), t(".company"), t(".actions")]
+              thead
+                - thead.each do |th|
+                  th= th
+              tbody
+                - @customers.each do |customer|
+                  tr
+                    td= customer.id
+                    td= customer.name
+                    td= customer.email
+                    td= customer.message
+                    td= customer.company
+                    td.actions
+                      = link_to t(".view"), admin_customer_path(customer), class: 'btn label label-success'
+                      | &nbsp;
+                      = link_to t(".delete"), admin_customer_path(customer),
+                        method: :delete, data: {confirm: 'Are you sure delete this customer?'},
+                        class: 'btn label label-danger'
+- else
+  .text-center
+    = t(".no_data")

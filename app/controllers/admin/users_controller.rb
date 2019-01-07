@@ -23,7 +23,7 @@ class Admin::UsersController < AdminController
       flash[:success] = t('.success')
       redirect_to edit_admin_user_path @user
     else
-      flash[:failed] = t('.fail')
+      flash[:failed] = t('.failed')
       render :new
     end
   end
@@ -36,19 +36,19 @@ class Admin::UsersController < AdminController
 
   def update
     if @user.update_attributes admin_update_user_params
-      flash[:success] = "Update success"
+      flash[:success] = t('.success')
       redirect_to admin_users_path
     else
-      flash[:failed] = "Update failed"
+      flash[:failed] = t('.failed')
       render :edit
     end
   end
 
   def destroy
     if @user.destroy
-      flash[:success] = "Destroyed user #{@user.name}"
+      flash[:success] = t('.success')
     else
-      flash[:danger] = "Can't destroy user #{@user.name}"
+      flash[:danger] = t('.failed')
     end
     redirect_to admin_users_path
   end

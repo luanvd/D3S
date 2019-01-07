@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :engagements
       resources :producers, except: :show
       resources :products, except: :show
+      resources :customers, only: [:index, :show, :destroy]
 
       resource :slider_shows, only: [:show, :edit, :update]
       resource :d3s_informations, only: [:show, :edit, :update]
