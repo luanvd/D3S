@@ -1,0 +1,25 @@
+.form-group
+  = f.label :image, class: "col-md-2 control-label" do
+    = t ".image"
+  .col-md-10
+    = f.file_field :image, class: "form-control"
+
+hr
+
+= f.fields_for :product_translations, product_translations do |ff|
+  = ff.hidden_field :language
+  p
+    = tranlations_version ff.object.language
+  .form-group
+    = ff.label :title, class: "col-md-2 control-label" do
+      = t ".title"
+    .col-md-10
+      = ff.text_field :title, class: "form-control"
+
+  .form-group
+    = ff.label :title, class: "col-md-2 control-label" do
+      = t ".content"
+    .col-md-10
+      = ff.cktext_area :content, class: "form-control"
+  
+  hr
