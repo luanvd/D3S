@@ -1,5 +1,9 @@
 en:
   admin:
+    users:
+      create:
+        fail: "Create failed"
+        success: "Create successed"
     slider_images:
       update:
         success: Update slider image successfully

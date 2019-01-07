@@ -20,10 +20,10 @@ class Admin::UsersController < AdminController
     @user.admin_create_user = true
     if @user.save
       UserMailer.send_password_to_user(@user.email, @user.password).deliver_now
-      flash[:success] = I18n.t('user.create.success')
+      flash[:success] = t('.success')
       redirect_to edit_admin_user_path @user
     else
-      flash[:failed] = I18n.t('user.create.fail')
+      flash[:failed] = t('.fail')
       render :new
     end
   end

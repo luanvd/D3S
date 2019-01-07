@@ -1,5 +1,6 @@
 class HomePagesController < ApplicationController
 
-	def index
-	end
+  def index
+    @customer = Customer.new
+  end
 end
