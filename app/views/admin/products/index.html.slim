@@ -1,0 +1,35 @@
+- provide :title, t('.products')
+section.content-header
+  = link_to t('.new_product'), new_admin_product_path, class: 'btn bg-purple margin'
+
+- if @products.any?
+  section.content
+    .row
+      .col-xs-12
+        - Settings.translation_languages.each do |lang|
+          .box.box-info
+            .box-header
+              h3.box-title 
+                p = tranlations_version lang
+              .box-body
+                table.table.table-bordered.table-striped
+                  thead
+                    th = t ".index"
+                    th = t ".image"
+                    th = t ".title"
+                    th = t ".content"
+                    th = t ".action"
+                  tbody
+                    - @products.each_with_index do |product, index|
+                      tr
+                        td = index + 1
+                        td
+                          = link_to product.image_url, "target": "blank" do
+                            = image_tag product.image_url, class: "image_in_table"
+                        - product_translation = product.by_localize(lang)
+                        td = raw product_translation&.title
+                        td = raw product_translation&.content
+                        td
+                          = link_to t(".edit"), edit_admin_product_path(product), class: "btn btn-flat btn-success mg-r-5"
+                          = link_to t(".delete"), admin_product_path(product), method: :delete,
+                            "data-confirm": t(".confirm_delete_product"), class: "btn btn-flat btn-danger mg-r-5"

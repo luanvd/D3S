@@ -32,3 +32,13 @@ fr:
       update:
         success: update popup successfully
         failed: update popup failed
+    products:
+      create:
+        success: creat product successfully
+        failed: creat product failed
+      update:
+        success: update product successfully
+        failed: update product failed
+      destroy:
+        success: delete product successfully
+        failed: delete product failed

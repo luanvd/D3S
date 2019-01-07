@@ -21,6 +21,23 @@ en:
       message: "Message"
       company: "Company"
   admin:
+    products:
+      index:
+        title: "Title"
+        content: "Content"
+        show: Show
+        edit: Edit
+        delete: delete
+        confirm_delete_product: "Delete this product, are you sure?"
+      form:
+        title: "Title"
+        content: "Content"
+      new:
+        submit: *submit
+        create_product: Create Producer
+      edit:
+        submit: *submit
+        edit_product: Edit Producer
     popups:
       show:
         popups: Popups
