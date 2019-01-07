@@ -5,6 +5,13 @@ en:
   view: &view "View"
   delete: &delete "Delete"
   back_to_list: &back_to_list "Back to list"
+  devise:
+    sessions:
+      new:
+        forgot_password: "You forgot your password?"
+        remebmer_me: "Remember Me"
+        sign_in_to_start: "Sign in to start"
+        sign_in: "Sign In"
   home_pages:
     customer:
       name: "Name"
