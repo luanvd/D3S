@@ -34,8 +34,8 @@ section.content-header
                   tr
                     td = t ".image"
                     td
-                      = link_to slider_image.image_url, "target": "blank" do
-                        = image_tag slider_image.image_url, class: "image_in_table"
+                      = link_to slider_image&.image_url, "target": "blank" do
+                        = image_tag slider_image&.image_url, class: "image_in_table"
                     td
                       = form_for [:admin, slider_image], html: {class: "form-inline form-horizontal"} do |f|
                         = f.text_field :sort_index, class: "form-control mg-r-5"

@@ -22,8 +22,8 @@ section.content-header
                   tr
                     td = index + 1
                     td
-                      = link_to producer.image_url, "target": "blank" do
-                        = image_tag producer.image_url, class: "image_in_table"
+                      = link_to producer&.image_url, "target": "blank" do
+                        = image_tag producer&.image_url, class: "image_in_table"
                     - Settings.translation_languages.each do |lang|
                       - producer_translation = producer.by_localize(lang)
                       td = producer_translation&.title
