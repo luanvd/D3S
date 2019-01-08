@@ -4,6 +4,13 @@ html
     meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
     title= full_title yield(:title)
     - if params[:controller] == 'home_pages'
+      link href="https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700,900" rel="stylesheet" /
+      meta content="width=device-width, initial-scale=1.0" name="viewport" /
+      meta content="ie=edge" http-equiv="X-UA-Compatible" /
+      meta content="colorlib" name="author" /
+      meta content="" name="description" /
+      meta content="" name="keywords" /
+      meta charset="UTF-8" /
       = stylesheet_link_tag 'home_pages', media: 'all'
       = javascript_include_tag 'home_pages'
     - else

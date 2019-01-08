@@ -10,12 +10,11 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require d3s/bootstrap
- *= require font-awesome
  *= require d3s/linearicons
- *= require d3s/slick
+ *= require d3s/bootstrap
  *= require d3s/font-awesome.min
  *= require d3s/animate.min
  *= require d3s/jquery-ui
+ *= require d3s/slick
  *= require d3s/main
  */

@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap.min
-//= require d3s/slick.min.js
+//= require d3s/bootstrap.min
+//= require d3s/slick.min
 //= require d3s/main
