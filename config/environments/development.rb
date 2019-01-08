@@ -55,10 +55,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    :user_name => 'app105234559@heroku.com',
-    :password => 'pbd65plr8473',
+    :user_name => 'luanvd@ominext.com',
+    :password => 'coltech4u',
     :domain => 'localhost',
-    :address => 'smtp.sendgrid.net',
+    :address => 'smtp.gmail.com',
     :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
