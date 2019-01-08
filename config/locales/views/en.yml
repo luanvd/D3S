@@ -3,6 +3,7 @@ en:
   edit: &edit "Edit"
   no_data: &no_data "There are no data"
   view: &view "View"
+  update: &update "Update"
   delete: &delete "Delete"
   back_to_list: &back_to_list "Back to list"
   devise:
@@ -32,6 +33,38 @@ en:
       message: "Message"
       company: "Company"
   admin:
+    facilities:
+      edit:
+        edit: *edit
+        image_video: "Image and Video"
+        image: "Image"
+        video: "Video"
+        facility_lang_title: "Facility with language"
+        language: 
+          en: "English"
+          fr: "France"
+        left_text_1: "Left text 1"
+        left_text_2: "Left text 2"
+        right_text_1: "Right text 1"
+        right_text_2: "Right text 2"
+        right_text_3: "Right text 3"
+        update: *update
+      show:
+        facility_title: "Facility"
+        edit: *edit
+        image_video: "Image and Video"
+        image: "Image"
+        video: "Video"
+        facility_lang_title: "Facility with language"
+        language: 
+          en: "English"
+          fr: "France"
+        left_text_1: "Left text 1"
+        left_text_2: "Left text 2"
+        right_text_1: "Right text 1"
+        right_text_2: "Right text 2"
+        right_text_3: "Right text 3"
+        update: *update        
     products:
       index:
         title: "Title"
@@ -233,3 +266,4 @@ en:
         slider_show: Slider
         engagement: Engagement
         customers: "Customers"
+        facilities: "Facilities"

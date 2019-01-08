@@ -58,7 +58,7 @@ origine_fr = Origine.first.origine_languages.build(language: "fr",
   right_des_3: "Mangue, pomme cajou, tamarin, noix de coco, pain de singe, ditakh, jujube,agrumes, papaye, bissap, gombo, loofah, etc… et c’est dans cet écrin préservé que D3S a installé sa première unité de préparation de fruits." )
 origine_fr.save
 
-puts "create_popup"
+puts "create popup"
 popup = Popup.create(name: "default")
 
 en_popup = popup.popup_translations.new(language: "en")
@@ -66,3 +66,22 @@ en_popup.save(validates: false)
 
 fr_popup = popup.popup_translations.new(language: "fr")
 fr_popup.save(validates: false)
+
+puts "create facility"
+Facility.create(name: "Facility", image: open("https://res.cloudinary.com/dev02l2pv/image/upload/v1546919139/section81-bg.png"),
+  video: open("https://res.cloudinary.com/dev02l2pv/video/upload/v1546918913/SampleVideo_1280x720_1mb.mp4"))
+facility_en = Facility.first.facility_languages.build(language: "en",
+  left_text_1: "SMALL PRODUCERS AND FAMILY OPERATIONS",
+  left_text_2: "A guarantee of quality",
+  right_text_1: "section1 We chose to focus on small producers and family farms rather than intensive agriculture in order to value and support the local economy while preserving traditional food products and ensuring the conservation of local agricultural biodiversity and sustainable use of natural resources.",
+  right_text_2: "This choice is for us a guarantee of quality of the products we select to offer you the best.",
+  right_text_3: "The owners are grouped together and we certify the harvest areas under the control of Globalgap and Ecocert. We establish the purchase price together and set up a harvest schedule (between May and late July depending on the weather and the level of ripening).")
+facility_en.save
+
+facility_fr = Facility.first.facility_languages.build(language: "fr",
+  left_text_1: "PETITS PRODUCTEURS ET EXPLOITATIONS FAMILIALES",
+  left_text_2: "Un gage de qualité",
+  right_text_1: "section1 Nous avons choisi de privilégier les petits producteurs et les exploitations familiales plutôt que l’agriculture intensive afin de valoriser et d’accompagner l’économie locale tout en préservant les produits alimentaires traditionnels et en veillant à la conservation de la biodiversité agricole locale et à l’utilisation durable des ressources naturelles.",
+  right_text_2: "Ce choix est pour nous un gage de qualité des produits que nous sélectionnons afin de vous offrir le meilleur. ",
+  right_text_3: "Les propriétaires sont regroupés en association et nous certifions les zones de récolte sous le contrôle de Globalgap et Ecocert. Nous établissons les prix d'achat ensemble et mettons en place un calendrier de récolte (entre mai et fin juillet selon la météo et le niveau de maturation).")
+facility_fr.save

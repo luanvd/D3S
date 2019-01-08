@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       resource :d3s_informations, only: [:show, :edit, :update]
       resource :origines, only: [:show, :edit, :update]
       resource :popups, only: [:show, :edit, :update]
+      resource :facilities, only: [:show, :edit, :update]
     end
   end
 end

@@ -1,0 +1,67 @@
+section.content
+  .row
+    .col-xs-8
+      .box.box-success
+        .box-header.with-border
+          h3.box-title= t('.edit')
+        .box-body
+          = nested_form_for @facility, url: admin_facilities_path do |f|
+            .= t '.image_video'
+            hr
+              .row
+                section#content-edit-facility-image-video.content
+                  .box.box-info
+                    .row
+                      .col-xs-6.box-header.with-border
+                        .text-center= t('.image')
+                      .col-xs-6.box-header.with-border
+                        .text-center= t('.video')
+                    .box-body
+                      .row
+                        .col-xs-6.text-center
+                          = image_tag @facility.image, height: 200, id: "img_prev_facility_image"
+                          .row
+                            .col-xs-8.col-xs-offset-2
+                              = f.file_field :image, class: "form-control facility_image", onchange: "readURL(this, '#img_prev_facility_image');"
+                        .col-xs-6.text-center
+                          = video_tag @facility.video, height: 200, id: "img_prev_facility_video", controls: true
+                          .row
+                            .col-xs-8.col-xs-offset-2
+                              = f.file_field :video, class: "form-control", onchange: "readURL(this, '#img_prev_facility_video');"
+            = t '.facility_lang_title'
+            hr
+            .row
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.en')
+                    .box-body
+                      = f.fields_for :facility_languages, @facility_en do |ff|
+                        = ff.text_field :left_text_1, class: "form-control", placeholder: t('.left_text_1')
+                        br
+                        = ff.text_field :left_text_2, class: "form-control", placeholder: t('.left_text_2')
+                        br
+                        = ff.text_field :right_text_1, class: "form-control", placeholder: t('.right_text_1')
+                        br
+                        = ff.text_field :right_text_2, class: "form-control", placeholder: t('.right_text_2')
+                        br
+                        = ff.text_field :right_text_3, class: "form-control", placeholder: t('.right_text_3')
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.fr')
+                    .box-body
+                      = f.fields_for :facility_languages, @facility_fr do |ff|
+                        = ff.text_field :left_text_1, class: "form-control", placeholder: t('.left_text_1')
+                        br
+                        = ff.text_field :left_text_2, class: "form-control", placeholder: t('.left_text_2')
+                        br
+                        = ff.text_field :right_text_1, class: "form-control", placeholder: t('.right_text_1')
+                        br
+                        = ff.text_field :right_text_2, class: "form-control", placeholder: t('.right_text_2')
+                        br
+                        = ff.text_field :right_text_3, class: "form-control", placeholder: t('.right_text_3')
+            .form-group
+              = f.submit t(".update"), class: "form-control btn btn-primary btn-flat"
