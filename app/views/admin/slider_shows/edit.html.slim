@@ -10,27 +10,31 @@ section.content
               = f.label :title_image_1, class: "col-md-2 control-label" do
                 = t ".title_image_1"
               .col-md-10
-                = f.file_field :title_image_1, class: "form-control"
+                = image_tag f.object.title_image_1, class: "preview_image", id: "img_slider_title_1" if f.object.title_image_1
+                = f.file_field :title_image_1, class: "form-control", onchange: "readURL(this, '#img_slider_title_1');"
             .form-group
               = f.label :title_image_2, class: "col-md-2 control-label" do
                 = t ".title_image_2"
               .col-md-10
-                = f.file_field :title_image_2, class: "form-control"
+                = image_tag f.object.title_image_2, class: "preview_image", id: "img_slider_title_1" if f.object.title_image_2
+                = f.file_field :title_image_2, class: "form-control", onchange: "readURL(this, '#img_slider_title_2');"
             
             hr
 
             = f.fields_for :slider_images, @slider_images do |ff|
-              .form-group
-                = ff.label :sort_index, class: "col-md-2 control-label" do
-                  = t ".sort_index"
-                .col-md-10
-                  = ff.text_field :sort_index, class: "form-control", disabled: true
+              / .form-group
+              /   = ff.label :sort_index, class: "col-md-2 control-label" do
+              /     = t ".sort_index"
+              /   .col-md-10
+              /     = ff.text_field :sort_index, class: "form-control", disabled: true
 
               .form-group
                 = ff.label :image, class: "col-md-2 control-label" do
                   = t ".image"
                 .col-md-10
-                  = ff.file_field :image, class: "form-control"
+                  - slider_img_id = "slider_img_#{ff.options[:child_index]}"
+                  = image_tag (ff.object.image), class: "preview_image", id: "#{slider_img_id}"
+                  = ff.file_field :image, class: "form-control", onchange: "readURL(this, '#{'#' + slider_img_id }');"
           
               = ff.link_to_remove t(".remove_this_image"), class: "danger_text"
               hr

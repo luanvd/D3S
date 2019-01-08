@@ -3,5 +3,5 @@ class SliderImage < ApplicationRecord
 
   belongs_to :slider_show
 
-  validates :sort_index, uniqueness: { scope: :slider_show_id }
+  validates :sort_index, uniqueness: { scope: :slider_show_id, allow_blank: true }
 end
