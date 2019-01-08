@@ -1,0 +1,59 @@
+- provide :title, t('.facility_title')
+section.content-header
+  = link_to t('.edit'), edit_admin_facilities_path, class: 'btn bg-purple margin'
+- if @facility.present?
+  section.content
+    .row
+      .col-xs-8
+        .box.box-info
+          .box-header
+            h3.box-title
+              = t('.facility_title')
+          .box-body
+            table#users-table.table.table-bordered.table-hover
+              - thead = [t('.image'), t('.video')]
+              thead
+                - thead.each do |th|
+                  th.text-center= th
+              tbody
+                tr
+                  td.text-center= image_tag @facility.image, height: 200
+                  td.text-center= video_tag @facility.video, height: 200, controls: true
+- else
+  p.text-center
+    | There are no data
+
+section.content
+  .row
+    .col-xs-8
+      .box.box-info
+        .box-header
+          h3.box-title
+            = t('.facility_lang_title')
+        .box-body
+          table#about-table.table.table-bordered.table-hover
+            - thead = ['', t('.language.en'), t('.language.fr')]
+            thead
+              - thead.each do |th|
+                th.text-center= th
+            tbody
+              tr
+                td.text-center= t('.left_text_1')
+                td.text-center= @facility_en.left_text_1
+                td.text-center= @facility_fr.left_text_1
+              tr
+                td.text-center= t('.left_text_2')
+                td.text-center= @facility_en.left_text_2
+                td.text-center= @facility_fr.left_text_2
+              tr
+                td.text-center= t('.right_text_1')
+                td.text-center= @facility_en.right_text_1
+                td.text-center= @facility_fr.right_text_1
+              tr
+                td.text-center= t('.right_text_2')
+                td.text-center= @facility_en.right_text_2
+                td.text-center= @facility_fr.right_text_2
+              tr
+                td.text-center= t('.right_text_3')
+                td.text-center= @facility_en.right_text_3
+                td.text-center= @facility_fr.right_text_3

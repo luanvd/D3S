@@ -56,3 +56,11 @@ en:
       destroy:
         success: Delete customer successfully
         failed: Delete customer failed
+    origines:
+      update:
+        success: Update origine successfully
+        failed: Update origine failed
+    facilities:
+      update:
+        success: Update facility successfully
+        failed: Update facility failed

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190107042104) do
+ActiveRecord::Schema.define(version: 20190108032837) do
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "data_file_name", null: false
@@ -69,6 +69,27 @@ ActiveRecord::Schema.define(version: 20190107042104) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "facilities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "image"
+    t.string "video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "facility_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "language"
+    t.string "left_text_1"
+    t.string "left_text_2"
+    t.text "right_text_1"
+    t.text "right_text_2"
+    t.text "right_text_3"
+    t.bigint "facility_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["facility_id"], name: "index_facility_languages_on_facility_id"
   end
 
   create_table "origine_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -176,5 +197,6 @@ ActiveRecord::Schema.define(version: 20190107042104) do
   end
 
   add_foreign_key "d3s_information_languages", "d3s_informations"
+  add_foreign_key "facility_languages", "facilities"
   add_foreign_key "origine_languages", "origines"
 end
