@@ -294,7 +294,11 @@ abbr[title=required] {
   margin-right: 5px;
 }
 
-.image_in_table {
+.image_in_table, .preview_image {
   max-height: 200px;
   max-width: 500px;
+}
+
+.box-body {
+  background-color: aliceblue !important;
 }

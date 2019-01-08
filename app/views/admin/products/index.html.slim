@@ -25,7 +25,7 @@ section.content-header
                         td = index + 1
                         td
                           = link_to product&.image_url, "target": "blank" do
-                            = image_tag product&.image_url, class: "image_in_table"
+                            = image_tag product&.image, class: "image_in_table"
                         - product_translation = product.by_localize(lang)
                         td = raw product_translation&.title
                         td = raw product_translation&.content

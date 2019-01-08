@@ -2,7 +2,8 @@
   = f.label :image, class: "col-md-2 control-label" do
     = t ".image"
   .col-md-10
-    = f.file_field :image, class: "form-control"
+    = image_tag f.object.image, class: "preview_image", id: "img_product" if f.object.image
+    = f.file_field :image, class: "form-control", onchange: "readURL(this, '#img_product');"
 
 hr
 
