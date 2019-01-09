@@ -1,0 +1,21 @@
+section#section11.cta-area style=("background-image: url('#{@origine.image.url}'); no-repeat center center") 
+  .container-fluid
+    .row.no-padding
+      .col-lg-6.single-cta.cta1.no-padding.section-gap.relative.single-cta-fix
+        h3.title-cta-area.title-cta-area-fix.text-right= @origine_language.left_text_1
+        p.text-right.title-cta-area-fix2
+          = @origine_language.left_text_2
+        p.text-right.title-cta-area-fix3
+          = @origine_language.left_text_3
+      .col-lg-6.single-cta.cta2.no-padding.section-gap.relative
+        .overlay.overlay-bg
+        .content
+          h3.title-cta-area= @origine_language.right_title_1
+          p.more
+            = @origine_language.right_des_1
+          h3.title-cta-area= @origine_language.right_title_2
+          p.more
+            = @origine_language.right_des_1
+          h3.title-cta-area= @origine_language.right_title_3
+          p.more
+            = @origine_language.right_des_3
