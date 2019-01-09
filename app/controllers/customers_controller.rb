@@ -4,8 +4,8 @@ class CustomersController < ApplicationController
     @customer = Customer.new customer_params
     if @customer.save
       CustomerMailer.send_email_create_customer(@customer).deliver_now
+      redirect_to root_url
     end
-    redirect_to root_url
   end
 
   private

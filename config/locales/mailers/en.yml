@@ -1,0 +1,4 @@
+en:
+  customer_mailer:
+    send_email_create_customer:
+      subject: "New customer register newsletter"

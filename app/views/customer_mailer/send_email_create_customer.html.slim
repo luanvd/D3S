@@ -1,6 +1,13 @@
-p= t(".new_customer")
-p
-  |= t(".name"): #{@customer.name}
-  |= t(".email"): #{@customer.email}
-  |= t(".message"): #{@customer.message}
-  |= t(".company"): #{@customer.company}
+h4= t(".new_customer")
+= t(".name")
+| :#{@customer.name}
+br/
+= t(".email")
+| :#{@customer.email}
+br/
+= t(".message")
+| :#{@customer.message}
+br/
+= t(".company")
+| :#{@customer.company}
+br/
