@@ -1,0 +1,28 @@
+section#section2.feature-area.section-gap
+  .container
+    .row.justify-content-between.align-items-start
+      .col-lg-6.feature-left
+        = image_tag d3s_info.image_1, class: "img-fluid"
+      .col-lg-6.feature-right
+        .single-feature
+          h4 = d3s_info.localize_title_1
+          p
+            = raw d3s_info.localize_des_1
+section#section3.feature-area.section-gap.pt-2
+  .container
+    .row.justify-content-between.align-items-start
+      .col-lg-12.feature-right
+        .single-feature
+          p
+            = raw d3s_info.localize_des_middle
+section#section4.feature-area.section-gap.pt-0.section-gap-fix
+  .container
+    .row.justify-content-between.align-items-start
+      .col-lg-6.feature-right
+        .single-feature
+          h4
+            = d3s_info.localize_title_2
+          p
+            = raw d3s_info.localize_des_2
+      .col-lg-6.feature-left
+        = image_tag d3s_info.image_1, class: "img-fluid"

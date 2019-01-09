@@ -1,0 +1,9 @@
+section#section7.top-category-widget-area
+  .container
+    .row
+      - engagements.each do |engagement|
+        .col-lg-3.px-40
+          .content
+            p.title-content = engagement.localize_title
+            p
+              = raw engagement.localize_content

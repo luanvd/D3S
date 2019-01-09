@@ -1,0 +1,13 @@
+section#section9.top-category-widget-area
+  .container
+    .row
+      - producers.each do |producer|
+        .col-lg-4
+          .single-cat-widget
+            .content.relative
+              .overlay.overlay-bg
+              a href="#" target="_blank" 
+                .thumb
+                  = image_tag producer.image, class: "content-image img-fluid d-block mx-auto"
+                .content-details
+                  h4.content-title.mx-auto.text-uppercase = producer.localize_title
