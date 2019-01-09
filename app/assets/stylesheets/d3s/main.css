@@ -3173,3 +3173,6 @@ iframe {
   .form-content {
     padding-right: 0px;
     margin-bottom: 20px; } }
+.text-danger-fix-color {
+  font-weight: 400;
+}
