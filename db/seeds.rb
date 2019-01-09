@@ -13,7 +13,28 @@ puts "create mod"
 User.create email: "mod@test.com", password: '12345678', role: :mod, name: "Mod D3S"
 
 puts "create default slider show"
-SliderShow.create(name: "Default")
+slider = SliderShow.create(name: "Default", title_1: open("https://res-5.cloudinary.com/dev02l2pv/image/upload/v1547028096/lqtqygeflfkomtn8ss6t.png"), title_2: open("https://res-1.cloudinary.com/dev02l2pv/image/upload/v1547028098/w3tslytjfegmofvrzq2g.png"))
+slider_img_1 = slider.slider_images.create sort_index: 1, image: open("https://res-1.cloudinary.com/dev02l2pv/image/upload/v1547028086/x6mvjntwcmaqw49td7q2.jpg")
+slider_img_2 = slider.slider_images.create sort_index: 2, image: open("https://res-3.cloudinary.com/dev02l2pv/image/upload/v1547028090/dzrjyceaupuyffr56h9a.jpg")
+slider_img_3 = slider.slider_images.create sort_index: 3, image: open("https://res-1.cloudinary.com/dev02l2pv/image/upload/v1547028094/o5sojbczns6mkanvazp5.jpg")
+
+puts "create engagement"
+engagement_1 = Engagement.create
+engagement_1_en_tran = engagement_1.engagement_translations.create(language: "en", title: "PRODUCERS", content: "Support of producers and support of the local economy. We put at our disposal a workforce trained by us to good harvesting practices, as well as all the necessary equipment for collecting and transporting the mango to the packing unit.")
+engagement_1_fr_tran = engagement_1.engagement_translations.create(language: "fr", title: "PRODUCTEURS", content: "Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre formée par nos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport de la mangue jusqu'a l'unité de conditionnement.")
+ 
+engagement_2 = Engagement.create
+engagement_2_en_tran = engagement_2.engagement_translations.create(language: "en", title: "LOCAL POPULATIONS", content: "Training and information for local people working in the process of producing, harvesting and preparing fruit for export throughout the year.")
+engagement_2_fr_tran = engagement_2.engagement_translations.create(language: "fr", title: "PRODUCERS", content: "Formation et information des populations locales amenées à travailler dans le processus de production, de récolte et de préparation des fruits à l’export tout au long de l’année.")
+ 
+engagement_3 = Engagement.create
+engagement_3_en_tran = engagement_3.engagement_translations.create(language: "en", title: "CLIENTS", content: "Guarantee not only products of superior organoleptic quality, but also products of a sanitary quality in accordance with the regulations in force, in particular concerning the Bio label.")
+engagement_3_fr_tran = engagement_3.engagement_translations.create(language: "fr", title: "CLIENTS", content: "Garantir non seulement des produits d’une qualité organoleptique supérieure, mais aussi des produits d’une qualité sanitaire conforme à la règlementation en vigueur, notamment concernant le label Bio.")
+ 
+engagement_4 = Engagement.create
+engagement_4_en_tran = engagement_4.engagement_translations.create(language: "en", title: "CONSUMERS", content: "Provide healthy and quality products both tasteful and nutritious. Show pedagogy especially on the conditions of conservation and quality of our products.")
+engagement_4_fr_tran = engagement_4.engagement_translations.create(language: "fr", title: "CONSOMMATEURS", content: "Fournir des produits sains et de qualité tant sur le plan gustatif que nutritif.Faire preuve de pédagogie en particulier sur les conditions de conservation et la qualité de nos produits.")
+ 
 
 puts "create default d3s information"
 D3sInformation.create(name: "About", image_1: open("http://res.cloudinary.com/dev02l2pv/image/upload/v1546569825/ayvdpzwiiozdp7nrj8x8.jpg"),

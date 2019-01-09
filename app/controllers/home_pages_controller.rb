@@ -9,6 +9,7 @@ class HomePagesController < ApplicationController
     @slider_images = @slider_show.slider_images
 
     @popup = Popup.includes(:popup_translations).first
+    @facility = Facility.includes(:facility_languages).first
   end
 
   private
