@@ -275,7 +275,7 @@ $.extend( $.validator, {
 		messages: {},
 		groups: {},
 		rules: {},
-		errorClass: "text-danger",
+		errorClass: "text-danger text-danger-fix-color",
 		pendingClass: "pending",
 		validClass: "valid",
 		errorElement: "label",
@@ -362,7 +362,7 @@ $.extend( $.validator, {
 	},
 
 	messages: {
-		required: I18n.t("home_pages.name"),
+		required: "This field is required.",
 		remote: "Please fix this field.",
 		email: "Please enter a valid email address.",
 		url: "Please enter a valid URL.",
