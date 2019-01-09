@@ -48,70 +48,7 @@
 </section>
 
 <!-- Start feature Area -->
-<section class="feature-area section-gap" id="section2">
-  <div class="container">
-    <div class="row justify-content-between align-items-start">
-      <div class="col-lg-6 feature-left">
-        <%= image_tag ("/assets/section2-img.jpg"), class: "img-fluid" %>
-      </div>
-      <div class="col-lg-6 feature-right">
-        <div class="single-feature">
-          <h4>Les origines de la marque</h4>
-          <p>
-            bLa marque D3S est née dans l’exceptionnelle région du Sine Saloum au Sénégal, de l'ambition de ses fondateurs
-            de valoriser
-            des mangues d’exceptions disponiles en grandes quantités sur une courte période de l'année.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-area section-gap pt-2" id="section3">
-  <div class="container">
-    <div class="row justify-content-between align-items-start">
-      <div class="col-lg-12 feature-right">
-        <div class="single-feature">
-          <p class="m-0 font-fix">
-            Permettre aux consommateurs européens et à travers le monde de découvrir ou de redécouvrir des produits
-            d'exceptions
-          </p>
-          <p class="m-0 font-fix">
-            C'est avec cet objectif en tête que D3S a recruté et formé le personnel travaillant aujourd'hui dans sa première
-            usine installée
-            depuis 2017 au plus près des zones de récoltes du Sine Saloum.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="feature-area section-gap pt-0 section-gap-fix" id="section4">
-  <div class="container">
-    <div class="row justify-content-between align-items-start">
-      <div class="col-lg-6 feature-right">
-        <div class="single-feature">
-          <h4>N'avez-vous jamais été surpris lors d'un voyage à l'étranger par le goût d'un fruit que vous pensiez
-            connaître ?</h4>
-          <p>
-            D3S s’est donné pour mission d’amener sur votre table le goût unique et originel de fruits d’exceptions cultivés
-            dans certaines
-            régions préservées du monde.
-          </p>
-        </div>
-
-      </div>
-      <div class="col-lg-6 feature-left">
-        <%= image_tag ("/assets/section3-img.jpg"), class: "img-fluid" %>
-      </div>
-
-    </div>
-  </div>
-</section>
+<%= render "d3s_info", d3s_info: @d3s_info %>
 <!-- End feature Area -->
 
 <section class="aclculation-area section-gap relative aclculation-area-bg m-0" id="section5">
@@ -129,58 +66,7 @@
   </div>
 </section>
 
-<section class="top-category-widget-area" id="section7">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 px-40">
-        <div class="content">
-          <p class="title-content">PRODUCTEURS</p>
-          <p>
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée par
-            nos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport de
-            la
-            mangue jusqu'a l'unité de conditionnement.
-          </p>
-          <p>En savoir plus</p>
-        </div>
-      </div>
-      <div class="col-lg-3 px-40">
-        <div class="content">
-          <p class="title-content">POPULATIONS LOCALES</p>
-          <p>
-            Formation et information des populations locales amenées à travailler dans le processus de production, de
-            récolte et de préparation
-            des fruits à l’export tout au long de l’année.
-          </p>
-        </div>
-
-      </div>
-      <div class="col-lg-3 px-40">
-        <div class="content">
-          <p class="title-content">CLIENTS</p>
-          <p>
-            Garantir non seulement des produits d’une qualité organoleptique supérieure, mais aussi des produits d’une
-            qualité sanitaire
-            conforme à la règlementation en vigueur, notamment concernant le label Bio.
-          </p>
-        </div>
-
-      </div>
-      <div class="col-lg-3 px-40">
-        <div class="content">
-          <p class="title-content">CONSOMMATEURS</p>
-          <p>
-            Fournir des produits sains et de qualité tant sur le plan gustatif que nutritif.Faire preuve de pédagogie en
-            particulier
-            sur les conditions de conservation et la qualité de nos produits.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "engagements", engagements: @engagements %>
 
 <section class="aclculation-area section-gap relative aclculation-area-before pt-0" id="section8">
   <div class="container text-center">
@@ -190,57 +76,7 @@
   </div>
 </section>
 
-<section class="top-category-widget-area" id="section9">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="single-cat-widget">
-          <div class="content relative">
-            <div class="overlay overlay-bg"></div>
-            <a href="#" target="_blank">
-              <div class="thumb">
-                <%= image_tag ("/assets/pro1.png"), class: "content-image img-fluid d-block mx-auto" %>
-              </div>
-              <div class="content-details">
-                <h4 class="content-title mx-auto text-uppercase">ORIGINE</h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat-widget">
-          <div class="content relative">
-            <div class="overlay overlay-bg"></div>
-            <a href="#" target="_blank">
-              <div class="thumb">
-                <%= image_tag ("/assets/pro2.jpg"), class: "content-image img-fluid d-block mx-auto" %>
-              </div>
-              <div class="content-details">
-                <h4 class="content-title mx-auto text-uppercase">PRODUIT</h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-cat-widget">
-          <div class="content relative">
-            <div class="overlay overlay-bg"></div>
-            <a href="#" target="_blank">
-              <div class="thumb">
-                <%= image_tag ("/assets/pro3.png"), class: "content-image img-fluid d-block mx-auto" %>
-              </div>
-              <div class="content-details">
-                <h4 class="content-title mx-auto text-uppercase">UNITÉ DE PRÉPARATION ET DE CONDITIONNEMENT</h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "producers", producers: @producers %>
 
 <section class="aclculation-area section-gap relative aclculation-area-bg4" id="section10">
   <div class="container text-center">
@@ -258,91 +94,7 @@
 </section>
 
 <!-- start Tab area -->
-<section class="section-tab section-gap" id="section13">
-  <div class="container text-center">
-    <div class="nav-tab">
-      <ul>
-        <li class="active" data-tab="tab-1">Mangues</li>
-        <li class="" data-tab="tab-2">A venir</li>
-        <!-- <li class="" data-tab="tab-3">3-tab</li>
-        <li class="" data-tab="tab-4" >4-tab</li> -->
-      </ul>
-    </div>
-
-    <div class="group-tab-content">
-      <div id="tab-1" class="tab-content active">
-        <div class="content">
-          <div class="row align-items-center">
-            <div class="col-lg-4">
-              <div class="pro-img-tab">
-                <img src="img/pro8.jpg" alt="">
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="pro-content text-left">
-                <h4>La mangue du Sine Saloum</h4>
-                <p class="more">
-                  L’un des atouts clés de la mangue du Sine Saloum est le goût particulier que lui confère le terroir de cette
-                  région : l’harmonieuse
-                  association des dépôts d’alluvions mélangés aux embruns maritimes et à la lentille d’eau douce en superficie
-                  des
-                  sols qui irrigue les vergers, apporte aux mangues du Sine Saloum un goût unique.
-                </p>
-                <p class="more">
-                  Autre atout de taille, la mangue du Sine Saloum est disponible entre mai et fin juillet, période pendant
-                  laquelle aucun autre
-                  pays et/ou région ne récolte et exporte ce fruit.
-                </p>
-                <h4>
-                  Finissons-en avec les idées reçues!« Une mangue verte n’est pas mûre »Faux!
-                </h4>
-                <p class="more">
-                  Nos vergers sont essentiellement des vergers villageois laissés à l’état naturel sans élagage intensif. Une
-                  mangue verte
-                  sera restée protégée du soleil et aura simplement pris plus de temps pour mûrir, mais elle possède
-                  strictement
-                  les mêmes qualités gustatives et nutritives que les mangues de coloration rouge.
-                </p>
-                <p class="more">
-                  Les mangues récoltées sont principalement des Kent mais nous avons aussi à disposition des Keitt, Tommy
-                  Atkins, Palmer et
-                  Valencia.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="tab-2" class="tab-content">
-        <div class="content">
-          <div class="row align-items-center">
-            <div class="col-lg-4">
-              <div class="pro-img-tab">
-                <img src="img/pro9.jpg" alt="">
-                <img src="img/pro9.jpg" alt="">
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="pro-content text-left">
-                <h4>
-                  Retrouvez bientot d'autres
-                  <br> variétés de fruits d'exception
-                </h4>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!-- <div id="tab-3" class="tab-content">
-        3
-      </div>
-      <div id="tab-4" class="tab-content">
-        4
-      </div> -->
-    </div>
-  </div>
-</section>
+<%= render "products", products: @products %>
 <!-- End Tab area -->
 
 <section class="aclculation-area section-gap relative aclculation-area-bg8" id="section14">
@@ -399,40 +151,7 @@
   </div>
 </section>
 
-<section class="cta-area cta-area1 cta-area2 cta-area3" id="section17">
-  <div class="container-fluid">
-    <div class="row no-padding">
-      <div class="col-lg-6 single-cta cta1 no-padding section-gap relative single-cta-fix">
-        <h3 class="title-cta-area title-cta-area-fix text-right">UNITÉ DE PREPARATION ET CONDITIONNEMENT</h3>
-        <p class="text-right title-cta-area-fix2 title-cta-area-fix3">
-          AU PLUS PRES DES ZONES DE PRODUCTION
-        </p>
-        <p class="text-right title-cta-area-fix2 title-cta-area-fix3">
-          (VIDEO EN FOND)
-        </p>
-      </div>
-      <div class="col-lg-6 single-cta cta2 no-padding section-gap relative">
-        <div class="overlay overlay-bg"></div>
-        <div class="content">
-          <p class="more">
-            Notre première unité de préparation et conditionnement se trouve au cœur du Sine Saloum pour sa proximité avec
-            les vergers
-            d’origine de nos mangues.
-          </p>
-
-          <p class="more">
-            Une chaîne semi-automatique a été conçue spécifiquement pour nettoyer, égoutter, brosser, sécher, peser et
-            calibrer les mangues
-            tout en préservant le fruit.
-          </p>
-
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-</section>
+<%= render "facility", facility: @facility %>
 
 <section class="aclculation-area section-gap relative aclculation-area-bg10" id="section18">
   <div class="container text-center">
@@ -540,29 +259,12 @@
       </div>
       <div class="modal-body">
         <div class="content">
-          <h4 class="text-center mb-2">Moldal Content</h4>
+          <h4 class="text-center mb-2"><%= @popup.localize_title %></h4>
           <div class="modal-img mb-3">
             <img src="img/slider2.jpg" alt="">
           </div>
           <p class="more-1">
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée parnos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport dela
-            mangue jusqu'a l'unité de conditionnement.
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée parnos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport dela
-            mangue jusqu'a l'unité de conditionnement.
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée parnos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport dela
-            mangue jusqu'a l'unité de conditionnement.
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée parnos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport dela
-            mangue jusqu'a l'unité de conditionnement.
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée parnos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport dela
-            mangue jusqu'a l'unité de conditionnement.
-            Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre
-            formée parnos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport dela
-            mangue jusqu'a l'unité de conditionnement.
+            <%= raw @popup.localize_content %>
           </p>
         </div>
       </div>

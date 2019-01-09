@@ -1,0 +1,22 @@
+section#section13.section-tab.section-gap
+  .container.text-center
+    .nav-tab
+      ul
+        - products.each_with_index do |product, index|
+          li class=("#{"active" if index == 0}") data-tab="tab-#{index + 1}" = product.localize_title
+        /!
+          | <li class="" data-tab="tab-3">3-tab</li
+          | <li class="" data-tab="tab-4" >4-tab</li
+    .group-tab-content
+      - products.each_with_index do |product, index|
+        div class=("tab-content #{"active" if index == 0}") id=("tab-#{index + 1}")
+          .content
+            .row.align-items-center
+              .col-lg-4
+                .pro-img-tab
+                  = image_tag product.image
+              .col-lg-8
+                .pro-content.text-left
+                  h4 = product.localize_title
+                  p.more
+                    = raw product.localize_content
