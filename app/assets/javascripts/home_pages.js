@@ -15,3 +15,5 @@
 //= require d3s/bootstrap.min
 //= require d3s/slick.min
 //= require d3s/main
+//= require d3s/jquery.validate
+//= require d3s/validate_newsletter
