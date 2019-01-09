@@ -1,0 +1,9 @@
+section#home.banner-area.relative.slider
+  .slider-img
+    - @slider_images.each do |img|
+      .item
+        = image_tag img.image
+  .banner-img
+    .content-banner
+      = image_tag @slider_show.title_image_1
+      = image_tag @slider_show.title_image_2, class: "img-banner2"
