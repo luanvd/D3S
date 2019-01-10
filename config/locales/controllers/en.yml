@@ -64,3 +64,7 @@ en:
       update:
         success: Update facility successfully
         failed: Update facility failed
+    producters:
+      update:
+        success: Update producter successfully
+        failed: Update producter failed

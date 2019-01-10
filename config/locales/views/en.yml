@@ -226,6 +226,37 @@ en:
       update:
         success: "Update origine successed"
         fail: "Update origine failed"
+    producters:
+      show:
+        edit: "Edit"
+        producter_title: "Producter"
+        producter_lang_title: "Producter with language"
+        image: "Image"
+        left_text_1: "Left text 1"
+        left_text_2: "Left text 2"
+        right_text_1: "Right text 1"
+        right_text_2: "Right text 2"
+        right_text_3: "Right text 3"
+        image_background: "Background Image"
+        language:
+          en: "English"
+          fr: "France"      
+      edit:
+        edit: "Edit Producter"
+        update: "Update Producter"
+        producter_lang_title: "Producter with language"
+        image: "Image"
+        left_text_1: "Left text 1"
+        left_text_2: "Left text 2"
+        right_text_1: "Right text 1"
+        right_text_2: "Right text 2"
+        right_text_3: "Right text 3"
+        language:
+          en: "English"
+          fr: "France"
+      update:
+        success: "Update producter successed"
+        fail: "Update producter failed"
     d3s_informations:
       show:
         edit: "Edit"
@@ -267,3 +298,4 @@ en:
         engagement: Engagement
         customers: "Customers"
         facilities: "Facilities"
+        producters: "Producters"

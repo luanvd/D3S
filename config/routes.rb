@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       resource :origines, only: [:show, :edit, :update]
       resource :popups, only: [:show, :edit, :update]
       resource :facilities, only: [:show, :edit, :update]
+      resource :producters, only: [:show, :edit, :update]
     end
   end
 end

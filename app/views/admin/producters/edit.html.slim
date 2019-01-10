@@ -1,0 +1,58 @@
+section.content
+  .row
+    .col-xs-8
+      .box.box-success
+        .box-header.with-border
+          h3.box-title= t('.edit')
+        .box-body
+          = nested_form_for @producter, url: admin_producters_path do |f|
+            .= t '.image'
+            hr
+              .row
+                section#content-edit-producter-image.content
+                  .box.box-info
+                    .row
+                      .col-xs-4.col-xs-offset-4.box-header.with-border
+                        .text-center= t('.image')
+                    .box-body
+                      .row.text-center
+                        .col-xs-4.col-xs-offset-4
+                          = image_tag @producter.image, height: 200, id: "img_prev_producter"
+                          = f.file_field :image, class: "form-control", onchange: "readURL(this, '#img_prev_producter');"
+            = t '.producter_lang_title'
+            hr
+            .row
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.en')
+                    .box-body
+                      = f.fields_for :producter_languages, @producter_en do |ff|
+                        = ff.text_field :left_text_1, class: "form-control", placeholder: t('.left_text_1')
+                        br
+                        = ff.text_field :left_text_2, class: "form-control", placeholder: t('.left_text_2')
+                        br
+                        = ff.text_field :right_text_1, class: "form-control", placeholder: t('.right_text_1')
+                        br
+                        = ff.text_field :right_text_2, class: "form-control", placeholder: t('.right_text_2')
+                        br
+                        = ff.text_field :right_text_3, class: "form-control", placeholder: t('.right_text_3')
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.fr')
+                    .box-body
+                      = f.fields_for :producter_languages, @producter_fr do |ff|
+                        = ff.text_field :left_text_1, class: "form-control", placeholder: t('.left_text_1')
+                        br
+                        = ff.text_field :left_text_2, class: "form-control", placeholder: t('.left_text_2')
+                        br
+                        = ff.text_field :right_text_1, class: "form-control", placeholder: t('.right_text_1')
+                        br
+                        = ff.text_field :right_text_2, class: "form-control", placeholder: t('.right_text_2')
+                        br
+                        = ff.text_field :right_text_3, class: "form-control", placeholder: t('.right_text_3')
+            .form-group
+              = f.submit t(".update"), class: "form-control btn btn-primary btn-flat"

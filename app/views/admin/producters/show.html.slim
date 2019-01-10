@@ -1,0 +1,55 @@
+- provide :title, t('.producter_title')
+section.content-header
+  = link_to t('.edit'), edit_admin_producters_path, class: 'btn bg-purple margin'
+- if @producter.present?
+  section.content
+    .row
+      .col-xs-8
+        .box.box-info
+          .box-header
+            h3.box-title
+              = t('.producter_title')
+          .box-body
+            .text-center= t('.image_background')
+            br
+            .row.text-center
+              .col-xs-4.col-xs-offset-4
+                = image_tag @producter.image, height: 200
+- else
+  p.text-center
+    | There are no data
+
+section.content
+  .row
+    .col-xs-8
+      .box.box-info
+        .box-header
+          h3.box-title
+            = t('.producter_lang_title')
+        .box-body
+          table#about-table.table.table-bordered.table-hover
+            - thead = ['', t('.language.en'), t('.language.fr')]
+            thead
+              - thead.each do |th|
+                th.text-center= th
+            tbody
+              tr
+                td.text-center= t('.left_text_1')
+                td.text-center= @producter_en.left_text_1
+                td.text-center= @producter_fr.left_text_1
+              tr
+                td.text-center= t('.left_text_2')
+                td.text-center= @producter_en.left_text_2
+                td.text-center= @producter_fr.left_text_2
+              tr
+                td.text-center= t('.right_text_1')
+                td.text-center= @producter_en.right_text_1
+                td.text-center= @producter_fr.right_text_1
+              tr
+                td.text-center= t('.right_text_2')
+                td.text-center= @producter_en.right_text_2
+                td.text-center= @producter_fr.right_text_2
+              tr
+                td.text-center= t('.right_text_3')
+                td.text-center= @producter_en.right_text_3
+                td.text-center= @producter_fr.right_text_3

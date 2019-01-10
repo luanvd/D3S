@@ -1,6 +1,6 @@
 class HomePagesController < ApplicationController
   before_action :load_origines, :load_d3s_information, :load_engagements, :load_products, 
-    :load_producers, only: :index
+    :load_producers, :load_producters, only: :index
 
   def index
     @customer = Customer.new
@@ -32,5 +32,10 @@ class HomePagesController < ApplicationController
 
   def load_producers
     @producers = Producer.all.includes(:producer_translations)
+  end
+
+  def load_producters
+    @producter = Producter.first
+    @producter_language = @producter.producter_languages.find_by_language(locale)  
   end
 end
