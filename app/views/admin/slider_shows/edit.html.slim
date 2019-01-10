@@ -16,7 +16,7 @@ section.content
               = f.label :title_image_2, class: "col-md-2 control-label" do
                 = t ".title_image_2"
               .col-md-10
-                = image_tag f.object.title_image_2, class: "preview_image", id: "img_slider_title_1" if f.object.title_image_2
+                = image_tag f.object.title_image_2, class: "preview_image", id: "img_slider_title_2" if f.object.title_image_2
                 = f.file_field :title_image_2, class: "form-control", onchange: "readURL(this, '#img_slider_title_2');"
             
             hr
