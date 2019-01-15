@@ -55,12 +55,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    :user_name => 'luanvd@ominext.com',
+    :user_name => 'levitan',
     :password => 'coltech4u',
     :domain => 'localhost',
-    :address => 'smtp.gmail.com',
+    :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
-  }  
+  }
 end
