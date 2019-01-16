@@ -28,6 +28,7 @@ section.content-header
                       - producer_translation = producer.by_localize(lang)
                       td = producer_translation&.title
                     td
-                      = link_to t(".edit"), edit_admin_producer_path(producer), class: "btn btn-flat btn-success mg-r-5"
+                      = link_to t(".edit"), edit_admin_producer_path(producer), class: "btn label label-info"
+                      | &nbsp;
                       = link_to t(".delete"), admin_producer_path(producer), method: :delete,
-                        "data-confirm": t(".confirm_delete_producer"), class: "btn btn-flat btn-danger mg-r-5"
+                        "data-confirm": t(".confirm_delete_producer"), class: "btn label label-danger"

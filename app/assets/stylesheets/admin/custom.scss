@@ -1,5 +1,14 @@
 @import 'font-awesome';
 
+.mg-t-5 {
+  margin-top: 5px;
+}
+
+#img_slider_title_1, #img_slider_title_2 {
+  background: #7d406c;
+  margin-bottom: 10px;
+}
+
 .facility_image {
   margin-top: 5px;
 }
@@ -119,7 +128,7 @@ button.btn.btn-primary.btn-block.btn-flat {
 }
 
 #admin-user-profile, #admin-customer-detail {
-  margin-top: 25px;  
+  margin-top: 25px;
 }
 
 #img_prev_origin, #img_prev_about_1, #img_prev_about_2 {

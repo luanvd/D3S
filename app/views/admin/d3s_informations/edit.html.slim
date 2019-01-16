@@ -15,7 +15,7 @@ section.content
                       .col-xs-6.box-header.with-border
                         .text-center= t('.image_1')
                       .col-xs-6.box-header.with-border
-                        .text-center= t('.image_2')                        
+                        .text-center= t('.image_2')
                     .box-body
                       .row
                         .col-xs-6.text-center
@@ -23,11 +23,13 @@ section.content
                           .row
                             .col-xs-8.col-xs-offset-2
                               = f.file_field :image_1, class: "form-control", onchange: "readURL(this, '#img_prev_about_1');"
+                              .text-danger.mg-t-5 Size: 850 x 567(px)
                         .col-xs-6.text-center
                           = image_tag @d3s_infor.image_2, height: 200, id: "img_prev_about_2"
                           .row
                             .col-xs-8.col-xs-offset-2
                               = f.file_field :image_2, class: "form-control", onchange: "readURL(this, '#img_prev_about_2');"
+                              .text-danger.mg-t-5 Size: 850 x 567(px)
             = t '.d3s_infor_lang_title'
             hr
             .row

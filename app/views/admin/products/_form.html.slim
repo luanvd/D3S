@@ -4,6 +4,7 @@
   .col-md-10
     = image_tag f.object.image, class: "preview_image", id: "img_product" if f.object.image
     = f.file_field :image, class: "form-control", onchange: "readURL(this, '#img_product');"
+    .text-danger.mg-t-5 Size: 458 x 305(px)
 
 hr
 
@@ -22,5 +23,5 @@ hr
       = t ".content"
     .col-md-10
       = ff.cktext_area :content, class: "form-control"
-  
+
   hr

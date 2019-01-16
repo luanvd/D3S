@@ -23,6 +23,7 @@ section.content
                           .row
                             .col-xs-8.col-xs-offset-2
                               = f.file_field :image, class: "form-control facility_image", onchange: "readURL(this, '#img_prev_facility_image');"
+                              .text-danger.mg-t-5 Size: 572 x 416(px)
                         .col-xs-6.text-center
                           = video_tag @facility.video, height: 200, id: "img_prev_facility_video", controls: true
                           .row
