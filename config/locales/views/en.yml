@@ -40,7 +40,7 @@ en:
         image: "Image"
         video: "Video"
         facility_lang_title: "Facility with language"
-        language: 
+        language:
           en: "English"
           fr: "France"
         left_text_1: "Left text 1"
@@ -56,7 +56,7 @@ en:
         image: "Image"
         video: "Video"
         facility_lang_title: "Facility with language"
-        language: 
+        language:
           en: "English"
           fr: "France"
         left_text_1: "Left text 1"
@@ -64,7 +64,7 @@ en:
         right_text_1: "Right text 1"
         right_text_2: "Right text 2"
         right_text_3: "Right text 3"
-        update: *update        
+        update: *update
     products:
       index:
         title: "Title"
@@ -101,7 +101,7 @@ en:
         name: "Name"
         email: "Email"
         message: "Message"
-        company: "Company"        
+        company: "Company"
         back_to_list: *back_to_list
     popups:
       show:
@@ -205,7 +205,7 @@ en:
         image_background: "Background Image"
         language:
           en: "English"
-          fr: "France"      
+          fr: "France"
       edit:
         edit: "Edit Origines"
         update: "Update Origines"
@@ -240,7 +240,7 @@ en:
         image_background: "Background Image"
         language:
           en: "English"
-          fr: "France"      
+          fr: "France"
       edit:
         edit: "Edit Producter"
         update: "Update Producter"
@@ -283,7 +283,7 @@ en:
         title_2: "Title 2"
         des_1: "Description 1"
         des_2: "Description 2"
-        des_middle: "Middle description"      
+        des_middle: "Middle description"
         language:
           en: "English"
           fr: "France"
@@ -293,9 +293,14 @@ en:
   layouts:
     admin:
       left_bar:
+        user: "Users"
         d3s_information: "About"
-        slider_show: Slider
-        engagement: Engagement
+        slider_show: "Slider"
+        origine: "Origine"
+        engagement: "Engagement Producter"
+        producer: "Engagement Quality"
         customers: "Customers"
         facilities: "Facilities"
         producters: "Producters"
+        popups: "Popup"
+        products: "Products"

@@ -9,7 +9,7 @@ section.content-header
         - Settings.translation_languages.each do |lang|
           .box.box-info
             .box-header
-              h3.box-title 
+              h3.box-title
                 p = tranlations_version lang
               .box-body
                 table.table.table-bordered.table-striped
@@ -30,6 +30,7 @@ section.content-header
                         td = raw product_translation&.title
                         td = raw product_translation&.content
                         td
-                          = link_to t(".edit"), edit_admin_product_path(product), class: "btn btn-flat btn-success mg-r-5"
+                          = link_to t(".edit"), edit_admin_product_path(product), class: "btn label label-info"
+                          | &nbsp;
                           = link_to t(".delete"), admin_product_path(product), method: :delete,
-                            "data-confirm": t(".confirm_delete_product"), class: "btn btn-flat btn-danger mg-r-5"
+                            "data-confirm": t(".confirm_delete_product"), class: "btn label label-danger"

@@ -19,6 +19,7 @@ section.content
                         .col-xs-4.col-xs-offset-4
                           = image_tag @origine.image, height: 200, id: "img_prev_origin"
                           = f.file_field :image, class: "form-control", onchange: "readURL(this, '#img_prev_origin');"
+                          .text-danger.mg-t-5 Size: 1219 x 811(px)
             = t '.origine_lang_title'
             hr
             .row

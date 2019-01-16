@@ -12,13 +12,15 @@ section.content
               .col-md-10
                 = image_tag f.object.title_image_1, class: "preview_image", id: "img_slider_title_1" if f.object.title_image_1
                 = f.file_field :title_image_1, class: "form-control", onchange: "readURL(this, '#img_slider_title_1');"
+                .text-danger.mg-t-5 Size: 620 x 102(px)
             .form-group
               = f.label :title_image_2, class: "col-md-2 control-label" do
                 = t ".title_image_2"
               .col-md-10
                 = image_tag f.object.title_image_2, class: "preview_image", id: "img_slider_title_2" if f.object.title_image_2
                 = f.file_field :title_image_2, class: "form-control", onchange: "readURL(this, '#img_slider_title_2');"
-            
+                .text-danger.mg-t-5 Size: 620 x 66(px)
+
             hr
 
             = f.fields_for :slider_images, @slider_images do |ff|
@@ -35,7 +37,8 @@ section.content
                   - slider_img_id = "slider_img_#{ff.options[:child_index]}"
                   = image_tag (ff.object.image), class: "preview_image", id: "#{slider_img_id}"
                   = ff.file_field :image, class: "form-control", onchange: "readURL(this, '#{'#' + slider_img_id }');"
-          
+                  .text-danger.mg-t-5 Size: 1920 x 811(px)
+
               = ff.link_to_remove t(".remove_this_image"), class: "danger_text"
               hr
             p = f.link_to_add t(".add_a_image"), :slider_images, class: "btn btn-success btn-flat"
