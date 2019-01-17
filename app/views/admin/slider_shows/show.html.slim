@@ -20,14 +20,14 @@ section.content-header
                   td
                     - if @slider_show.title_image_1.present?
                       = link_to @slider_show.title_image_1_url, "target": "blank" do
-                        = image_tag @slider_show.title_image_1, class: "image_in_table"
+                        = image_tag @slider_show.title_image_1, class: "image_in_table add-background"
                   td N/A
                 tr
                   td = t ".title_image_2"
                   td
                     -if @slider_show.title_image_2.present?
                       = link_to @slider_show.title_image_2_url, "target": "blank" do
-                        = image_tag @slider_show.title_image_2, class: "image_in_table"
+                        = image_tag @slider_show.title_image_2, class: "image_in_table add-background"
                   td N/A
 
                 - @slider_images.each do |slider_image|
@@ -40,4 +40,4 @@ section.content-header
                       = form_for [:admin, slider_image], html: {class: "form-inline form-horizontal"} do |f|
                         = f.text_field :sort_index, class: "form-control mg-r-5"
                         = f.submit t(".submit"), class: "btn btn-primary btn-flat"
-            
+

@@ -1,4 +1,6 @@
 class Admin::EngagementsController < AdminController
+  load_and_authorize_resource
+
   before_action :load_engagement, except: [:index, :new, :create]
 
   def index

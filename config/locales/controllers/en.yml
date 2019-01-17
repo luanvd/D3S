@@ -68,3 +68,7 @@ en:
       update:
         success: Update producter successfully
         failed: Update producter failed
+    module_themes:
+      update:
+        success: Update module theme successfully
+        failed: Update module theme failed

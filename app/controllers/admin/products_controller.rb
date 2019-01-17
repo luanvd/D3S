@@ -1,4 +1,6 @@
 class Admin::ProductsController < AdminController
+  load_and_authorize_resource
+
   before_action :load_product, except: [:index, :new, :create]
 
   def index

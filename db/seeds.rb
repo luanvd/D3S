@@ -22,19 +22,19 @@ puts "create engagement"
 engagement_1 = Engagement.create
 engagement_1_en_tran = engagement_1.engagement_translations.create(language: "en", title: "PRODUCERS", content: "Support of producers and support of the local economy. We put at our disposal a workforce trained by us to good harvesting practices, as well as all the necessary equipment for collecting and transporting the mango to the packing unit.")
 engagement_1_fr_tran = engagement_1.engagement_translations.create(language: "fr", title: "PRODUCTEURS", content: "Accompagnement des producteurs et soutien de l’économie locale. Nous mettons à leur disposition une main d'œuvre formée par nos soins aux bonnes pratiques de récolte, ainsi que tout le matériel nécessaire au ramassage et au transport de la mangue jusqu'a l'unité de conditionnement.")
- 
+
 engagement_2 = Engagement.create
 engagement_2_en_tran = engagement_2.engagement_translations.create(language: "en", title: "LOCAL POPULATIONS", content: "Training and information for local people working in the process of producing, harvesting and preparing fruit for export throughout the year.")
 engagement_2_fr_tran = engagement_2.engagement_translations.create(language: "fr", title: "PRODUCERS", content: "Formation et information des populations locales amenées à travailler dans le processus de production, de récolte et de préparation des fruits à l’export tout au long de l’année.")
- 
+
 engagement_3 = Engagement.create
 engagement_3_en_tran = engagement_3.engagement_translations.create(language: "en", title: "CLIENTS", content: "Guarantee not only products of superior organoleptic quality, but also products of a sanitary quality in accordance with the regulations in force, in particular concerning the Bio label.")
 engagement_3_fr_tran = engagement_3.engagement_translations.create(language: "fr", title: "CLIENTS", content: "Garantir non seulement des produits d’une qualité organoleptique supérieure, mais aussi des produits d’une qualité sanitaire conforme à la règlementation en vigueur, notamment concernant le label Bio.")
- 
+
 engagement_4 = Engagement.create
 engagement_4_en_tran = engagement_4.engagement_translations.create(language: "en", title: "CONSUMERS", content: "Provide healthy and quality products both tasteful and nutritious. Show pedagogy especially on the conditions of conservation and quality of our products.")
 engagement_4_fr_tran = engagement_4.engagement_translations.create(language: "fr", title: "CONSOMMATEURS", content: "Fournir des produits sains et de qualité tant sur le plan gustatif que nutritif.Faire preuve de pédagogie en particulier sur les conditions de conservation et la qualité de nos produits.")
- 
+
 
 puts "create default d3s information"
 D3sInformation.create(name: "About", image_1: open("http://res.cloudinary.com/dev02l2pv/image/upload/v1546569825/ayvdpzwiiozdp7nrj8x8.jpg"),
@@ -124,3 +124,29 @@ producter_fr = Producter.first.producter_languages.build(language: "fr",
   right_text_2: "Ce choix est pour nous un gage de qualité des produits que nous sélectionnons afin de vous offrir le meilleur.",
   right_text_3: "Les propriétaires sont regroupés en association et nous certifions les zones de récolte sous le contrôle de Globalgap et Ecocert. Nous établissons les prix d'achat ensemble et mettons en place un calendrier de récolte (entre mai et fin juillet selon la météo et le niveau de maturation).")
 producter_fr.save
+
+puts "create module theme"
+ModuleTheme.create(name: "Module Theme")
+module_theme_en = ModuleTheme.first.module_theme_languages.build(language: "en",
+  img_about: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630857/section1.png",
+  img_enga: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630981/section2.png",
+  img_enga_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
+  img_enga_quality: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
+  img_origine: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631067/section-img4.png",
+  img_product: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631103/section7-img.png",
+  img_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
+  img_facility: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
+  img_contact: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631217/section10-img.png")
+module_theme_en.save
+
+module_theme_fr = ModuleTheme.first.module_theme_languages.build(language: "fr",
+  img_about: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630857/section1.png",
+  img_enga: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630981/section2.png",
+  img_enga_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
+  img_enga_quality: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
+  img_origine: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631067/section-img4.png",
+  img_product: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631103/section7-img.png",
+  img_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
+  img_facility: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
+  img_contact: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631217/section10-img.png")
+module_theme_fr.save

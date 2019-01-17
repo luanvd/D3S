@@ -70,5 +70,5 @@ class Admin::UsersController < AdminController
 
   def admin_update_user_params
     params.require(:user).permit User::UPDATE_ATTRIBUTE
-  end  
+  end
 end

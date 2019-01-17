@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190110024046) do
+ActiveRecord::Schema.define(version: 20190116081156) do
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "data_file_name", null: false
@@ -90,6 +90,29 @@ ActiveRecord::Schema.define(version: 20190110024046) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["facility_id"], name: "index_facility_languages_on_facility_id"
+  end
+
+  create_table "module_theme_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "language"
+    t.string "img_about"
+    t.string "img_enga"
+    t.string "img_enga_producter"
+    t.string "img_enga_quality"
+    t.string "img_origine"
+    t.string "img_product"
+    t.string "img_producter"
+    t.string "img_facility"
+    t.string "img_contact"
+    t.bigint "module_theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["module_theme_id"], name: "index_module_theme_languages_on_module_theme_id"
+  end
+
+  create_table "module_themes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "origine_languages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -218,6 +241,7 @@ ActiveRecord::Schema.define(version: 20190110024046) do
 
   add_foreign_key "d3s_information_languages", "d3s_informations"
   add_foreign_key "facility_languages", "facilities"
+  add_foreign_key "module_theme_languages", "module_themes"
   add_foreign_key "origine_languages", "origines"
   add_foreign_key "producter_languages", "producters"
 end

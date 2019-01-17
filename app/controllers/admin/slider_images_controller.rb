@@ -1,4 +1,6 @@
 class Admin::SliderImagesController < AdminController
+  load_and_authorize_resource
+
   def update
     @slider_show = SliderShow.first
     @slider_image = SliderImage.find params[:id]
