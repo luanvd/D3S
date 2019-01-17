@@ -4,9 +4,20 @@
   margin-top: 5px;
 }
 
-#img_slider_title_1, #img_slider_title_2 {
+.mg-b-10 {
+  margin-bottom: 10px;
+}
+
+#img_slider_title_1, #img_slider_title_2, #img_prev_img_about, #img_prev_img_about,
+  #img_prev_img_enga, #img_prev_img_enga_producter, #img_prev_img_enga_quality,
+  #img_prev_img_origine, #img_prev_img_product, #img_prev_img_producter,
+  #img_prev_img_facility, #img_prev_img_contact {
   background: #7d406c;
   margin-bottom: 10px;
+}
+
+.add-background {
+  background: #7d406c;
 }
 
 .facility_image {

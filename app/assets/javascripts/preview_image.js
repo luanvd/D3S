@@ -3,9 +3,11 @@ function readURL(input, id) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      $(id)
-        .attr('src', e.target.result)
-        .height(200);
+      if (id == "#img_slider_title_1" || id == "#img_slider_title_2") {
+        $(id).attr('src', e.target.result);
+      } else {
+        $(id).attr('src', e.target.result).height(200);
+      }
     };
 
     reader.readAsDataURL(input.files[0]);

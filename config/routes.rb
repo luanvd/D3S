@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       resource :popups, only: [:show, :edit, :update]
       resource :facilities, only: [:show, :edit, :update]
       resource :producters, only: [:show, :edit, :update]
+      resource :module_themes, only: [:show, :edit, :update]
     end
   end
 end

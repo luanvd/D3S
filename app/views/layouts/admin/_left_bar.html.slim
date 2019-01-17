@@ -64,3 +64,7 @@ aside.main-sidebar
         = link_to admin_customers_path, id: "left-bar-admin-customer" do
           i.fa.fa-address-book
           span = t ".customers"
+      li
+        = link_to admin_module_themes_path, id: "left-bar-admin-module-theme" do
+          i.fa.fa-image
+          span = t ".theme"

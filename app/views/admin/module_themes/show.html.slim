@@ -1,0 +1,131 @@
+section.content-header
+  = link_to t('.edit'), edit_admin_module_themes_path, class: 'btn bg-purple margin'
+section.content
+  .row
+    .col-xs-8
+      .box.box-success
+        .box-header.with-border
+          h3.box-title
+            = t '.module_theme_lang_title'
+        .box-body
+          = nested_form_for @module_theme, url: admin_module_themes_path do |f|
+            hr
+            .row
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.en')
+                    .box-body
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.about")
+                          = image_tag @module_theme_en.img_about, width: 400, id: "img_prev_img_about"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.engagement")
+                          = image_tag @module_theme_en.img_enga, width: 400, id: "img_prev_img_enga"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.engagement_producter")
+                          = image_tag @module_theme_en.img_enga_producter, width: 400, id: "img_prev_img_enga_producter"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.engagement_quality")
+                          = image_tag @module_theme_en.img_enga_quality, width: 400, id: "img_prev_img_enga_quality"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.origine")
+                          = image_tag @module_theme_en.img_origine, width: 400, id: "img_prev_img_origine"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.products")
+                          = image_tag @module_theme_en.img_product, width: 400, id: "img_prev_img_product"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.producters")
+                          = image_tag @module_theme_en.img_producter, width: 400, id: "img_prev_img_producter"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.facilities")
+                          = image_tag @module_theme_en.img_facility, width: 400, id: "img_prev_img_facility"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.contact")
+                          = image_tag @module_theme_en.img_contact, width: 400, id: "img_prev_img_contact"
+              .col-xs-6
+                section.content
+                  .box.box-info
+                    .box-header.with-border
+                      .text-center= t('.language.fr')
+                    .box-body
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.about")
+                          = image_tag @module_theme_fr.img_about, width: 400, id: "img_prev_img_about"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.engagement")
+                          = image_tag @module_theme_fr.img_enga, width: 400, id: "img_prev_img_enga"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.engagement_producter")
+                          = image_tag @module_theme_fr.img_enga_producter, width: 400, id: "img_prev_img_enga_producter"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.engagement_quality")
+                          = image_tag @module_theme_fr.img_enga_quality, width: 400, id: "img_prev_img_enga_quality"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.origine")
+                          = image_tag @module_theme_fr.img_origine, width: 400, id: "img_prev_img_origine"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.products")
+                          = image_tag @module_theme_fr.img_product, width: 400, id: "img_prev_img_product"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.producters")
+                          = image_tag @module_theme_fr.img_producter, width: 400, id: "img_prev_img_producter"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.facilities")
+                          = image_tag @module_theme_fr.img_facility, width: 400, id: "img_prev_img_facility"
+                      hr
+                      .row
+                        .text-center
+                          .row.mg-b-10
+                            = t(".img.contact")
+                          = image_tag @module_theme_fr.img_contact, width: 400, id: "img_prev_img_contact"
