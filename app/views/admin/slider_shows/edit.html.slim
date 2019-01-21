@@ -6,21 +6,26 @@ section.content
           h3.box-title= t('.edit')
         .box-body
           = nested_form_for @slider_show, url: admin_slider_shows_path, html: {class: "form-horizontal"} do |f|
-            .form-group
-              = f.label :title_image_1, class: "col-md-2 control-label" do
-                = t ".title_image_1"
-              .col-md-10
-                = image_tag f.object.title_image_1, class: "preview_image", id: "img_slider_title_1" if f.object.title_image_1
-                = f.file_field :title_image_1, class: "form-control", onchange: "readURL(this, '#img_slider_title_1');"
-                .text-danger.mg-t-5 Size: 620 x 102(px)
-            .form-group
-              = f.label :title_image_2, class: "col-md-2 control-label" do
-                = t ".title_image_2"
-              .col-md-10
-                = image_tag f.object.title_image_2, class: "preview_image", id: "img_slider_title_2" if f.object.title_image_2
-                = f.file_field :title_image_2, class: "form-control", onchange: "readURL(this, '#img_slider_title_2');"
-                .text-danger.mg-t-5 Size: 620 x 66(px)
-
+            = f.fields_for :slider_show_translations, @slider_show_translations do |f|
+              = f.hidden_field :language
+              - lang = f.object.language
+              - slider_show_translation = @slider_show.slider_show_translations.by_language(lang).first
+              p
+                = tranlations_version f.object.language
+              .form-group
+                = f.label :title_1, class: "col-md-2 control-label" do
+                  = t ".title_1"
+                .col-md-10
+                  = image_tag slider_show_translation&.title_1, class: "preview_image", id: "img_slider_#{lang}_title_1" if slider_show_translation
+                  = f.file_field :title_1, class: "form-control", onchange: "readURL(this, '#img_slider_#{lang}_title_1');"
+                  .text-danger.mg-t-5 Size: 620 x 102(px)
+              .form-group
+                = f.label :title_2, class: "col-md-2 control-label" do
+                  = t ".title_2"
+                .col-md-10
+                  = image_tag slider_show_translation&.title_2, class: "preview_image", id: "img_slider_#{lang}_title_2" if slider_show_translation
+                  = f.file_field :title_2, class: "form-control", onchange: "readURL(this, '#img_slider_#{lang}_title_2');"
+                  .text-danger.mg-t-5 Size: 620 x 66(px)
             hr
 
             = f.fields_for :slider_images, @slider_images do |ff|

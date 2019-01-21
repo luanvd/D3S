@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190121042752) do
+ActiveRecord::Schema.define(version: 20190121103832) do
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "data_file_name", null: false
@@ -213,6 +213,16 @@ ActiveRecord::Schema.define(version: 20190121042752) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slider_show_id"], name: "index_slider_images_on_slider_show_id"
+  end
+
+  create_table "slider_show_translations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "slider_show_id"
+    t.integer "language", default: 0
+    t.string "title_1"
+    t.string "title_2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slider_show_id"], name: "index_slider_show_translations_on_slider_show_id"
   end
 
   create_table "slider_shows", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
