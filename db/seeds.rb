@@ -94,7 +94,7 @@ Facility.create(name: "Facility", image: open("https://res.cloudinary.com/dev02l
 facility_en = Facility.first.facility_languages.build(language: "en",
   left_text_1: "SMALL PRODUCERS AND FAMILY OPERATIONS",
   left_text_2: "A guarantee of quality",
-  right_text_1: "section1 We chose to focus on small producers and family farms rather than intensive agriculture in order to value and support the local economy while preserving traditional food products and ensuring the conservation of local agricultural biodiversity and sustainable use of natural resources.",
+  right_text_1: "We chose to focus on small producers and family farms rather than intensive agriculture in order to value and support the local economy while preserving traditional food products and ensuring the conservation of local agricultural biodiversity and sustainable use of natural resources.",
   right_text_2: "This choice is for us a guarantee of quality of the products we select to offer you the best.",
   right_text_3: "The owners are grouped together and we certify the harvest areas under the control of Globalgap and Ecocert. We establish the purchase price together and set up a harvest schedule (between May and late July depending on the weather and the level of ripening).")
 facility_en.save
@@ -102,7 +102,7 @@ facility_en.save
 facility_fr = Facility.first.facility_languages.build(language: "fr",
   left_text_1: "PETITS PRODUCTEURS ET EXPLOITATIONS FAMILIALES",
   left_text_2: "Un gage de qualité",
-  right_text_1: "section1 Nous avons choisi de privilégier les petits producteurs et les exploitations familiales plutôt que l’agriculture intensive afin de valoriser et d’accompagner l’économie locale tout en préservant les produits alimentaires traditionnels et en veillant à la conservation de la biodiversité agricole locale et à l’utilisation durable des ressources naturelles.",
+  right_text_1: "Nous avons choisi de privilégier les petits producteurs et les exploitations familiales plutôt que l’agriculture intensive afin de valoriser et d’accompagner l’économie locale tout en préservant les produits alimentaires traditionnels et en veillant à la conservation de la biodiversité agricole locale et à l’utilisation durable des ressources naturelles.",
   right_text_2: "Ce choix est pour nous un gage de qualité des produits que nous sélectionnons afin de vous offrir le meilleur. ",
   right_text_3: "Les propriétaires sont regroupés en association et nous certifions les zones de récolte sous le contrôle de Globalgap et Ecocert. Nous établissons les prix d'achat ensemble et mettons en place un calendrier de récolte (entre mai et fin juillet selon la météo et le niveau de maturation).")
 facility_fr.save
@@ -127,26 +127,24 @@ producter_fr.save
 
 puts "create module theme"
 ModuleTheme.create(name: "Module Theme")
-module_theme_en = ModuleTheme.first.module_theme_languages.build(language: "en",
-  img_about: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630857/section1.png",
-  img_enga: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630981/section2.png",
-  img_enga_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
-  img_enga_quality: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
-  img_origine: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631067/section-img4.png",
-  img_product: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631103/section7-img.png",
-  img_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
-  img_facility: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
-  img_contact: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631217/section10-img.png")
-module_theme_en.save
-
 module_theme_fr = ModuleTheme.first.module_theme_languages.build(language: "fr",
-  img_about: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630857/section1.png",
-  img_enga: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547630981/section2.png",
-  img_enga_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
-  img_enga_quality: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631016/section3.png",
-  img_origine: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631067/section-img4.png",
-  img_product: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631103/section7-img.png",
-  img_producter: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
-  img_facility: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631131/section9-img.png",
-  img_contact: "https://res.cloudinary.com/dev02l2pv/image/upload/v1547631217/section10-img.png")
+  img_about: "Qui sommes nous",
+  img_enga: "Une démarche engagée",
+  img_enga_producter: "Nos engagements uis à des hers Du producteur auconsommateur",
+  img_origine: "Desterres D’exception",
+  img_product: "Nos Produits",
+  img_producter: "Nos Installations",
+  img_facility: "Nos Producter",
+  img_contact: "Nos Marques")
 module_theme_fr.save
+
+module_theme_en = ModuleTheme.first.module_theme_languages.build(language: "en",
+  img_about: "Who we are",
+  img_enga: "A committed approach",
+  img_enga_producter: "Our commitments to the consumer producer",
+  img_origine: "Desterres Of Exception",
+  img_product: "Our products",
+  img_producter: "Our Installations",
+  img_facility: "Our Producters",
+  img_contact: "Our Brands")
+module_theme_en.save
