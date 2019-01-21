@@ -9,6 +9,7 @@ class Admin::SliderShowsController < AdminController
 
   def edit
     @slider_images = @slider_show.slider_images.order(sort_index: :asc).presence || [@slider_show.slider_images.new]
+    build_slider_show_translations @slider_show
   end
 
   def update
@@ -26,7 +27,9 @@ class Admin::SliderShowsController < AdminController
 
   private
   def slider_show_params
-    params.require(:slider_show).permit(:title_image_1, :title_image_2, slider_images_attributes: [:id, :slider_show_id, :image, :_destroy])
+    params.require(:slider_show).permit(
+      slider_show_translations_attributes: [:id, :slider_show_id, :title_1, :title_2, :language],
+      slider_images_attributes: [:id, :slider_show_id, :image, :_destroy])
   end
 
   def load_slider_show
@@ -38,5 +41,13 @@ class Admin::SliderShowsController < AdminController
       flash[:failed] = t ".no_slider_show"
       redirect_to admin_root_path
     end
+  end
+
+  def build_slider_show_translations slider_show
+    @slider_show_translations = []
+    Settings.translation_languages.each do |lang|
+      @slider_show_translations << slider_show.slider_show_translations.new(language: lang)
+    end
+    @slider_show_translations
   end
 end

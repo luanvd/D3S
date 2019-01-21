@@ -9,27 +9,31 @@ section.content-header
           .box-header
             h3.box-title Slider images list
           .box-body
+            h3 Title image
+            table.table.table-bordered.table-striped
+              thead
+                th Name
+                th Images
+              tbody
+                - Settings.translation_languages.each do |lang|
+                  tr
+                    td = "#{tranlations_version lang} title 1"
+                    td
+                      = link_to @slider_show.localize_title_1.url, "target": "blank" do
+                        = image_tag @slider_show.localize_title_1, class: "image_in_table"
+                  tr
+                    td = "#{tranlations_version lang} title 2"
+                    td
+                      = link_to @slider_show.localize_title_2.url, "target": "blank" do
+                        = image_tag @slider_show.localize_title_2, class: "image_in_table"
+
+            h3 Slider images
             table.table.table-bordered.table-striped
               thead
                 th = t ".type"
                 th = t ".image"
                 th = t ".sort_index"
               tbody
-                tr
-                  td = t ".title_image_1"
-                  td
-                    - if @slider_show.title_image_1.present?
-                      = link_to @slider_show.title_image_1_url, "target": "blank" do
-                        = image_tag @slider_show.title_image_1, class: "image_in_table add-background"
-                  td N/A
-                tr
-                  td = t ".title_image_2"
-                  td
-                    -if @slider_show.title_image_2.present?
-                      = link_to @slider_show.title_image_2_url, "target": "blank" do
-                        = image_tag @slider_show.title_image_2, class: "image_in_table add-background"
-                  td N/A
-
                 - @slider_images.each do |slider_image|
                   tr
                     td = t ".image"
