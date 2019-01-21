@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190116081156) do
+ActiveRecord::Schema.define(version: 20190121042752) do
 
   create_table "ckeditor_assets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "data_file_name", null: false
@@ -97,7 +97,6 @@ ActiveRecord::Schema.define(version: 20190116081156) do
     t.string "img_about"
     t.string "img_enga"
     t.string "img_enga_producter"
-    t.string "img_enga_quality"
     t.string "img_origine"
     t.string "img_product"
     t.string "img_producter"

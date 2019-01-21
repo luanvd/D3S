@@ -98,7 +98,7 @@ fr:
         image_background: "Background Image"
         language:
           en: "English"
-          fr: "France"      
+          fr: "France"
       edit:
         edit: "Edit Origines"
         update: "Update Origines"
@@ -145,7 +145,7 @@ fr:
         title_2: "Title 2"
         des_1: "Description 1"
         des_2: "Description 2"
-        des_middle: "Middle description"      
+        des_middle: "Middle description"
         language:
           en: "English"
           fr: "France"

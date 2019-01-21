@@ -4,7 +4,7 @@ $(document).ready(function () {
 
 
 
-    //------- Slider  js --------//  
+    //------- Slider  js --------//
 
     $('.slider-img').slick({
         infinite: true,
@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
 
 
-    //------- Mobile Nav  js --------//  
+    //------- Mobile Nav  js --------//
 
     if ($('#nav-menu-container').length) {
         var $mobile_nav = $('#nav-menu-container').clone().prop({
@@ -64,7 +64,7 @@ $(document).ready(function () {
         $('#mobile-body-overly').fadeOut();
 
     });
-    //------- Header Scroll Class  js --------//  
+    //------- Header Scroll Class  js --------//
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -75,7 +75,7 @@ $(document).ready(function () {
     });
 
 
-    //------- Tab  js --------//  
+    //------- Tab  js --------//
     $('.nav-tab ul li').click(function () {
         var tab_id = $(this).attr('data-tab');
         $('.nav-tab ul li').removeClass('active');
@@ -84,7 +84,7 @@ $(document).ready(function () {
         $("#" + tab_id).addClass('active');
     })
 
-    //------- Scroll smooth  js --------// 
+    //------- Scroll smooth  js --------//
     $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -100,7 +100,7 @@ $(document).ready(function () {
         });
     });
 
-    //------- Validation form  js --------// 
+    //------- Validation form  js --------//
     $(".single-input").keyup(function () {
 
         if ($(this).val() == "") {
@@ -111,16 +111,16 @@ $(document).ready(function () {
         }
     });
 
-    //------- Moaldal  js --------// 
+    //------- Moaldal  js --------//
     $("#myModal").modal('show');
 
-    //------- Show/hile content  js --------// 
+    //------- Show/hile content  js --------//
 
     var showChar = 100;  // How many characters are shown by default
-    var showChar1 = 750 ; 
+    var showChar1 = 750 ;
     var ellipsestext = "...";
-    var moretext = "read more >";
-    var lesstext = "read less";
+    var moretext = "En savoir plus >";
+    var lesstext = "Lire moins";
 
 
     $('.more').each(function () {
@@ -159,7 +159,7 @@ $(document).ready(function () {
         return false;
     });
 
-    // ===== Scroll to Top ==== 
+    // ===== Scroll to Top ====
     $(window).scroll(function () {
         if ($(this).scrollTop() >= 50) {
             $('#return-to-top').fadeIn(200);

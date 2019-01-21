@@ -40,34 +40,34 @@ en:
         language:
           en: "English"
           fr: "France"
-        module_theme_lang_title: "Module Theme with language"
+        module_theme_lang_title: "Module Title with language"
         img:
-          about: "Image theme for module image"
-          origine: "Image theme for module Origine"
-          engagement: "Image theme for Engagement section"
-          engagement_producter: "Image theme for Engagement producter"
-          engagement_quality: "Image theme for Engagement quality"
-          facilities: "Image theme for module module Facilities"
-          producters: "Image theme for module Producters"
-          products: "Image theme for module Products"
-          contact: "Image theme for module Contact"
+          about: "Title for module about"
+          origine: "Title for module Origine"
+          engagement: "Title for Engagement section"
+          engagement_producter: "Title for Engagement producter"
+          engagement_quality: "Title for Engagement quality"
+          facilities: "Title for module module Facilities"
+          producters: "Title for module Producters"
+          products: "Title for module Products"
+          contact: "Title for module Contact"
       show:
         edit: *edit
         update: *update
         language:
           en: "English"
           fr: "France"
-        module_theme_lang_title: "Module Theme with language"
+        module_theme_lang_title: "Module title with language"
         img:
-          about: "Image theme for module image"
-          origine: "Image theme for module Origine"
-          engagement: "Image theme for Engagement section"
-          engagement_producter: "Image theme for Engagement producter"
-          engagement_quality: "Image theme for Engagement quality"
-          facilities: "Image theme for module module Facilities"
-          producters: "Image theme for module Producters"
-          products: "Image theme for module Products"
-          contact: "Image theme for module Contact"
+          about: "Title for module about"
+          origine: "Title for module Origine"
+          engagement: "Title for Engagement section"
+          engagement_producter: "Title for Engagement producter"
+          engagement_quality: "Title for Engagement quality"
+          facilities: "Title for module module Facilities"
+          producters: "Title for module Producters"
+          products: "Title for module Products"
+          contact: "Title for module Contact"
     facilities:
       edit:
         edit: *edit
